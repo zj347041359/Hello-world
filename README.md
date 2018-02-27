@@ -1,3 +1,2 @@
-# Hello-world
-Just another repository
-I will see the new world when you open this file.
+# 代码小仓库
+主要放置平时练手所写代码，欢迎指正。
