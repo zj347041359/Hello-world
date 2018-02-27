@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>for练习2</title>
+<script>
+	for(i=100;i<1000;i++){
+		var b=parseInt(i/100);
+		var s=parseInt((i-b*100)/10);
+		var g=i-b*100-s*10;
+		if(b*b*b+s*s*s+g*g*g==i){
+			document.write(i+"<br>");
+		}
+	}
+</script>
+</head>
+<body>
+    
+</body>
+</html>
