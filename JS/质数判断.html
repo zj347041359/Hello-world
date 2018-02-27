@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<script>
+	var num=prompt("请输入一个大于1的数值：");
+	if(num<=1){
+		alert("该数值非法");
+	}
+	else{
+		var flag=true;
+		for(i=2;i<num;i++){
+			if(num%i==0){
+				flag=false;
+			}
+		}
+		if(flag){
+				alert("该数值为质数。");
+			}
+			else{
+				alert("该数值不是质数。");
+			}
+	}
+</script>
+</head>
+<body>
+    
+</body>
+</html>

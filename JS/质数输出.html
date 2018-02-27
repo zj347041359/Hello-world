@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>质数输出</title>
+<script>
+	console.time("text");
+	for(i=2;i<10000;i++){
+		var flag=true;
+		for(j=2;j<Math.sqrt(i);j++){
+			if(i%j==0){
+				flag=false;
+				break;
+			}
+		}
+		if(flag){
+			document.write(i+"&nbsp");
+		}
+	}
+	console.timeEnd("text");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

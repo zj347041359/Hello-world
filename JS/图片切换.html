@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>图片切换</title>	
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#imgdiv{
+		text-align:center;
+		background-color:blue;
+		margin:0,auto;
+	}
+	img{
+		margin:auto;
+		padding: 10px;
+		display:block;
+	}
+	/*.show{
+		
+	}
+	.none{
+		display:none;
+	}*/
+</style>
+
+</head> 
+<body>
+	<div id="imgdiv">
+		<p id="info"></p>
+	    <img src="BL/胡德.jpg">
+	    <!-- <img class="none" src="BL/犬.png">
+	    <img class="none" src="BL/贝姐.jpg">
+	    <img class="none" src="BL/圣地亚哥.jpg">
+	    <img class="none" src="BL/鸾.jpg">
+	    <img class="none" src="BL/齐柏林.jpg">
+	    <img class="none" src="BL/Z46.jpg">
+	     --><button id="prev" type="button" >上一张</button>
+	    <button id="next" type="button" >下一张</button>
+	</div>
+
+</body>
+<script type="text/javascript">
+	var img=document.getElementsByTagName("img")[0];
+	var info=document.getElementById("info");
+	//info.innerHTML=index;
+	//alert(img[0]);
+	var index=0;
+	var arr2=["BL/胡德.jpg","BL/犬.jpg","BL/贝姐.jpg","BL/圣地亚哥.jpg","BL/鸾.jpg","BL/齐柏林.jpg","BL/Z46.jpg","BL/鹬.jpg","BL/华盛顿.jpg","BL/光辉.jpg","BL/提尔比茨.jpg"];
+	var prev=document.getElementById("prev");
+	prev.onclick=function(){
+		index--;
+		if(index<0){
+			index=arr2.length-1;
+		}
+		img.src=arr2[index];
+		info.innerHTML="一共"+arr2.length+"张，这是第"+(index+1)+"张";
+	}
+	var next=document.getElementById("next");
+	next.onclick=function(){
+		index++;
+		if(index>arr2.length-1){
+			index=0;
+		}
+		img.src=arr2[index];
+		info.innerHTML="一共"+arr2.length+"张，这是第"+(index+1)+"张";
+	}
+	info.innerHTML="一共"+arr2.length+"张，这是第"+(index+1)+"张";
+</script>
+</html>

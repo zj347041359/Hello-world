@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DIV随方向键移动</title>
+<style type="text/css">
+	#div1{
+		height: 100px;
+		width: 100px;
+		background-color: red;
+		position: absolute;
+	}
+</style>
+
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+    	var div1=document.getElementById("div1");
+    	var speed=20;
+    	var dir=0;
+    	setInterval(function(){
+    		switch(dir){
+    			case 37:div1.style.left=div1.offsetLeft-speed+"px";
+    			break;
+    			case 38:div1.style.top=div1.offsetTop-speed+"px";
+    			break;
+    			case 39:div1.style.left=div1.offsetLeft+speed+"px";
+    			break;
+    			case 40:div1.style.top=div1.offsetTop+speed+"px";
+    			break;
+    		}
+    	},100)
+    	document.onkeydown=function(evnet){
+    		dir=event.keyCode;
+    		if(event.ctrlKey){
+    			speed=50;
+    		}
+    		else{
+    			speed=20;
+    		}
+    		// event=window.event||event;
+    		// console.log(event.keyCode);
+    	}
+    	document.onkeyup=function(){
+    		dir=0;
+    	}
+    	// function foo(){
+    	// 	var i=0;
+    	// 	return function(n){
+    	// 		console.log(n+i++);
+    	// 	}
+    	// }
+    	// var f=foo();
+    	// f(20);
+    	// foo()(20);
+    	// foo()(10);
+    	// f(10);
+    </script>
+</body>
+</html>
