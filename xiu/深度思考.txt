@@ -1,3 +1,4 @@
+任务一
 1.HTML文件里开头的Doctype有什么作用
 	声明文档所用HTML版本，HTML5为<!DOCTYPE html>。
 
@@ -30,3 +31,29 @@
 
 7.加和不加meta的viewport有什么区别？
 	不加meta的viewport可能会导致在页面在PC上效果没问题，但是手机浏览器却会帮网页缩小，能看到整个网页却看不清字体。设置一般能让页面适应移动设备屏幕大小来显示，还能设定默认缩放比例，是否允许用户缩放等。
+
+任务二
+1.如何使用svn将代码上传至githup?
+先将库下载到本地，然后放入新文件或更改代码，最后add和commit，第一次要提供github账号和密码。
+
+2.如何使用git将代码上传至githup?
+用git创建ssh key $ ssh-keygen -t rsa -C "your_email@youremail.com"
+部署到github上
+然后添加远程仓库地址$ git remote add origin git@github.com:yourName/yourRepo.git
+之后也是add和commit
+最后上传  $ git push origin master 	
+
+3.svn和git有什么区别?
+1.svn是集中式，git是分布式。
+2.git没有一个全局版本号，而svn有。
+3.数据储存算法不一样，git的比较嫩保证编码内容的完整性。
+
+4.如何利用githup搭建自己的个人网站？
+最简单的就是创建一个库，命名为username.github.io，然后创建一个索引index.html，然后提交发布，就能通过username.github.io访问index.html。
+
+5.如何配置nginx，实现在手机上查看页面？
+一是解压后将个人的网页改名为index替换掉html文件夹里的index，然后启动nginx。
+二是通过更该配置文件conf里的nginx.conf将默认的index改为目标文件，然后启动nginx，但这种方式我没有配置成功，有需要再去详细研究一下。
+
+6.如何将代码部署至自己的服务器？
+远程连接后使用github或svn。
