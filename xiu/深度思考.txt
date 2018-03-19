@@ -1,9 +1,14 @@
 任务一
+
 1.HTML文件里开头的Doctype有什么作用
 	声明文档所用HTML版本，HTML5为<!DOCTYPE html>。
 
+
+
 2.如何理解盒模型及其content、padding、border、margin？
 	盒子模型就是以内容为主体更改样式的一种思维模型，content和border，内容和边框一般都有实体，然后依照padding内边距和margin外边距来调整内容与边框，边框与另一盒子的距离。
+
+
 
 3.常见的inline元素、block元素、inline-block元素有哪些？它们之间有什么区别
 	inline，内联元素，常见元素有a,span,br,i,em,strong,label,q,var,cite,code,
@@ -13,14 +18,20 @@
 	(1)块级元素会独占一行，而内联元素和内联块元素则会在一行内显示。即会不会自动换行。
 	(2)块级元素和内联块元素可以设置 width、height 属性，而内联元素设置无效。即能否设置
 	(3)块级元素的 width 默认为 100%，而内联元素则是根据其自身的内容或子元素来决定其宽度。即默认宽带差别。
+
+
 4.如何使用浏览器的F12调试页面？
 	对于已完成的代码可以在浏览器运行并通过F12测试页面进行测试调整，查看样式是否有异，元素大小内容有无差错，各浏览器兼容有无问题，以及不同移动端表现情况。
+
+
 
 5.九宫格的布局你还能想到哪些办法实现？它们各自的优势劣势是什么？
 	(1)可以使用无序列表ul，跟使用div差不多，就是需要注意去掉前面的点。
 	(2)可以使用a和span标签，但是需要设置浮动，将元素变为内联块元素，否则会由于无法设置宽高都无法显示。
 	(3)p标签也能使用，但与div一样需设置浮动。
 	即基本能插入内容的标签应该都可以，但需注意浮动改变元素为内联块元素以及一些单独的样式更改。
+
+
 
 6.IDE是什么？它和文本编辑器相比有什么优缺点？
 	IDE是集成开发环境。包括了编辑器，编译器等。比如eclipse就是一款IDE。
@@ -29,31 +40,45 @@
 	IDE提供了大量的工具，不过正式因为如此，软件非常的笨重（消耗内存），大家觉得有些IDE	打开时间非常慢。
 	文本编辑器，轻便，可以自定义插件，不过有时候需要的插件多，不方便。
 
+
+
 7.加和不加meta的viewport有什么区别？
 	不加meta的viewport可能会导致在页面在PC上效果没问题，但是手机浏览器却会帮网页缩小，能看到整个网页却看不清字体。设置一般能让页面适应移动设备屏幕大小来显示，还能设定默认缩放比例，是否允许用户缩放等。
 
+
+
 任务二
+
 1.如何使用svn将代码上传至githup?
 先将库下载到本地，然后放入新文件或更改代码，最后add和commit，第一次要提供github账号和密码。
+
+
 
 2.如何使用git将代码上传至githup?
 用git创建ssh key $ ssh-keygen -t rsa -C "your_email@youremail.com"
 部署到github上
 然后添加远程仓库地址$ git remote add origin git@github.com:yourName/yourRepo.git
 之后也是add和commit
-最后上传  $ git push origin master 	
+最后上传  $ git push origin master 
+	
+
 
 3.svn和git有什么区别?
-1.svn是集中式，git是分布式。
-2.git没有一个全局版本号，而svn有。
+1.svn是集中式，git是分布式。2.git没有一个全局版本号，而svn有。
 3.数据储存算法不一样，git的比较嫩保证编码内容的完整性。
+
+
 
 4.如何利用githup搭建自己的个人网站？
 最简单的就是创建一个库，命名为username.github.io，然后创建一个索引index.html，然后提交发布，就能通过username.github.io访问index.html。
 
+
+
 5.如何配置nginx，实现在手机上查看页面？
 一是解压后将个人的网页改名为index替换掉html文件夹里的index，然后启动nginx。
 二是通过更该配置文件conf里的nginx.conf将默认的index改为目标文件，然后启动nginx，但这种方式我没有配置成功，有需要再去详细研究一下。
+
+
 
 6.如何将代码部署至自己的服务器？
 远程连接后使用github或svn。
