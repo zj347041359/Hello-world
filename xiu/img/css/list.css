@@ -2,13 +2,6 @@
 /**
  * 
  * @authors Your Name (you@example.org)
- * @date    2018-04-18 21:39:02
- * @version $Id$
- */
-@charset "UTF-8";
-/**
- * 
- * @authors Your Name (you@example.org)
  * @date    2018-04-09 16:29:49
  * @version $Id$
  */
@@ -16,22 +9,7 @@
 	margin:0;
 	padding: 0;
  }
- 	@media screen and (min-width: 0px) {html{font-size:50px;}}
-	@media screen and (min-width: 360px) {html{font-size:56.25px;}}
-	@media screen and (min-width: 375px) {html{font-size:58.59375px;}}
-	@media screen and (min-width: 400px) {html{font-size:62.5px;}}
-	@media screen and (min-width: 414px) {html{font-size:64.6875px;}}
-	@media screen and (min-width: 440px) {html{font-size:68.75px;}}
-	@media screen and (min-width: 480px) {html{font-size:75px;}}
-	@media screen and (min-width: 520px) {html{font-size:81.25px;}}
-	@media screen and (min-width: 560px) {html{font-size:87.5px;}}
-	@media screen and (min-width: 600px) {html{font-size:93.75px;}}
-	@media screen and (min-width: 640px) {html{font-size:100px;}}
-	@media screen and (min-width: 680px) {html{font-size:106.25px;}}
-	@media screen and (min-width: 720px) {html{font-size:112.5px;}}
-	@media screen and (min-width: 760px) {html{font-size:118.75px;}}
-	@media screen and (min-width: 800px) {html{font-size:125px;}}
-	@media screen and (min-width: 960px) {html{font-size:150px;}}
+ 
  	.top{
 			position: fixed;
 			top:0px;
@@ -41,28 +19,28 @@
 		}
  	.header{
 			position: relative;
-			height: 0.78rem;
+			height: 88px;
 			background-color: #5fc0cd;
 		}
 	.choose{
-			width: 2.53rem;
-			height: 0.60rem;
+			width: 285px;
+			height: 68px;
 			background-color: #55a8b3;
 			font-family: 黑体 繁;
 			position: absolute;
 			top:50%;
-			font-size: 0.3rem;
+			font-size: 34px;
 	  		left: 50%;
 	  		transform: translate(-50%,-50%);
-	  		line-height: 0.60rem;
+	  		line-height: 68px;
 	  		display: flex;
-	  		border-radius: 0.09rem;
+	  		border-radius: 10px;
 		}
 		.choose a{
 			display: inline-block;
 			flex-grow: 1;
 			text-align: center;
-			border-radius: 0.09rem;
+			border-radius: 10px;
 			text-decoration:none;
 
 		}
@@ -74,49 +52,49 @@
 			color: #5fc0cd;
 		}
 		.map{
-			width: 0.37rem;
-			height: 0.39rem;
+			width: 42px;
+			height: 44px;
 			position: absolute;
-			top: 0.20rem;
-			right: 0.27rem;
+			bottom: 21px;
+			right: 30px;
 			background-image: url("../img/map.jpg");
-			background-size: 0.37rem 0.39rem;
+			background-size: 42px 44px;
 		}
 		.screening{
 			width: 100%;
-			height:0.72rem;
+			height:81px;
 			border-bottom: 1px solid #e1e5e7;
 			display: flex;
 			position: relative;
 		}
 		.screening div{
 			flex: 1;
-			font-size: 0.25rem;
+			font-size: 28px;
 			color: #999999;
 			text-align:center;
-			line-height: 0.72rem;
+			line-height: 81px;
 			display: inline-block;
 			align-items: center;
 
 		}
 		.triangle{
-			margin-left: 0.18rem;
+			margin-left: 20px;
 			width: 0;
 			height: 0;
 			border-top: 13px solid #afbac0;
 			border-left: 7px solid transparent;
 			border-right: 7px solid transparent;
-			right: 0.11rem;
+			right: 12px;
 		}
 		.side1{
-			height: 0.63rem;
+			height: 71px;
 			border-right: 1px solid #e3e7e8;
 			position: absolute;
-			top: 0.04rem;
+			top: 5px;
 			left: 33.3%;
 		}
 		.side2{
-			height: 0.63rem;
+			height: 71px;
 			border-right: 1px solid #e3e7e8;
 			position: absolute;
 			top: 5px;
@@ -144,49 +122,49 @@
 			to { -webkit-transform:scaleY(1); }
 		}
 		.footer{
-			height: 0.89rem;
+			height: 100px;
 			width: 100%;
 			position: fixed;
 			bottom: 0;
 			left: 0;
 			border-top: 1px solid #e2eaec;
 			background-color: #fff;
+			display: flex;
 		}
 		.footer a{
 			background-image: url("../img/footer.png");
-			background-size: 1.62rem 0.84rem;
 		}
 		.footer1{
-			width: 0.41rem;
-			height: 0.65rem;
-			background-position: -0.374rem 0px ;
+			width: 46px;
+			height: 73px;
+			background-position: -42px 0px ;
 			position: absolute;
-			bottom: 0.17rem;
-			left: 1.47rem;
+			bottom: 19px;
+			left: 22.9%;
 		}
 		.footer2{
-			width: 0.84rem;
-			height: 0.84rem;
-			background-position: -0.78rem 0px ;
+			width: 94px;
+			height: 94px;
+			background-position: -88px 0px ;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
 		}
 		.footer3{
-			width: 0.37rem;
-			height: 0.68rem;
+			width: 42px;
+			height: 76px;
 			background-position: 0px 0px ;
 			position: absolute;
-			bottom:0.17rem;
-			right: 1.51rem;
+			bottom:19px;
+			right: 23.6%;
 		}
 		.none{
-			height:1.51rem;
+			height:170px;
 			width: 100%;
 		}
 		.content{
-			height: 1.6rem;
+			height: 180px;
 			width: 100%;
 			border-bottom: 1px solid #e1e5e7;
 			position: relative;
@@ -194,79 +172,74 @@
 		.content span{
 			display: inline-block;
 			background-image: url("../img/content.png");
-			background-size: 0.38rem 0.21rem;
 		}
 		.icon1{
-			display: flex;
-			align-items: center;
 			position: absolute;
-			top: 0.27rem;
-			left: 0.27rem;
+			top: 30px;
+			left: 30px;
+			text-align: center;
 		}
 		.icon1 span{
-			width: 0.213rem;
-			height: 0.213rem;
-			background-position: -0.17rem 0px;
+			width: 24px;
+			height: 24px;
+			background-position: -19px 0px;
 		}
 		.icon1 p{
 			display: inline-block;
-			font-size: 0.23rem;
+			font-size: 26px;
 			color: #999;
 			font-family: 黑体-繁;
-			margin-left: 0.04rem;
-			margin-top: 0.04rem;
+			margin-left: 5px;
+			margin-bottom: 5px;
 		}
 		.content a{
-			border-left: 0.04rem solid #5fc0cd;
-            border-bottom: 0.04rem solid #5fc0cd;
+			border-left: 5px solid #5fc0cd;
+            border-bottom: 5px solid #5fc0cd;
             height: 15px;
             width: 15px;
             transform: rotate(-135deg);
             -webkit-transform: rotate(-135deg);
             /*不加这两个属性三角会比上一个略丑, 大家可以试一下*/
             position: absolute;
-            right: 0.28rem;
-            top:0.71rem;
+            right: 32px;
+            top:80px;
 		}
 		.time{
-			font-size: 0.25rem;
+			font-size: 28px;
 			color: #333;
 			font-family: 黑体-繁;
 			position: absolute;
-            left: 0.60rem;
-            top:0.65rem;
-            text-overflow: ellipsis;
-  			white-space: nowrap;
-  			overflow: hidden;
+            left: 68px;
+            top:73px;
 		}
 		.price{
-			font-size: 0.27rem;
+			font-size: 30px;
 			color: #e63b0e;
 			font-family: 黑体-繁;
 			position: absolute;
-            right: 0.64rem;
-            top:0.65rem;
+            right: 72px;
+            top:73px;
 		}
 		.icon2{
 			position: absolute;
-			bottom: 0.23rem;
-			left: 0.27rem;
-			display: flex;
-			align-items: center;
+			bottom: 26px;
+			left: 30px;
+			text-align: center;
 		}
 		.icon2 span{
-			width: 0.17rem;
-			height: 0.20rem;
+			width: 19px;
+			height: 23px;
 			background-position: 0px 0px;
 		}
 		.icon2 p{
 			display: inline-block;
-			font-size: 0.23rem;
+			font-size: 26px;
 			color: #999;
 			font-family: 黑体-繁;
-			margin-left: 0.044rem;
+			margin-left: 5px;
+			margin-bottom: 5px;
 		}
 		.none2{
-			height: 0.89rem;
+			height: 100px;
 			width: 100%;
 		}
