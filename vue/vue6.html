@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue表单</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+	<div id="app">
+		<component-a></component-a><br>
+		<component-b></component-b><br>
+		<component-c></component-c><br>
+	</div>
+
+	<script type="text/javascript">
+		// Vue.component('component-a',{ props: ['post'],
+	 //  template: `
+	 //    <a>a</a>
+	 //  `})
+		// Vue.component('component-b',{props: ['post'],
+	 //  template: `
+	 //    <component-a></component-a>
+	 //  `})
+		// Vue.component('component-c',{props: ['post'],
+	 //  template: `
+	 //    <a>c</a>
+	 //  `})
+		// new Vue({el:'#app'})
+		var ComponentA = {}
+		var ComponentB = {}
+		var ComponentC = {}
+		new Vue({
+			el: '#app'
+			components:{
+				'component-a': ComponentA,
+				'component-b': ComponentB
+			}
+		})
+	</script>
+</body>
+</html>

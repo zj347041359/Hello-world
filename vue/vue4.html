@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue表单</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+	<!-- <div id="dome1">
+		<p>{{checkNames}}</p>
+		<input type="checkbox" id="jack" value="Jack" v-model="checkNames">
+		<label for="jack">Jack</label>
+		<input type="checkbox" id="john" value="John" v-model="checkNames">
+		<label for="john">John</label>
+		<input type="checkbox" id="mike" value="Mike" v-model="checkNames">
+		<label for="mike">Mike</label><br>
+		<span>Checked names: {{ checkNames }}</span>
+	</div> -->
+	<!-- <div id="example-4">
+	  <input type="radio" id="one" value="One" v-model="picked">
+	  <label for="one">One</label>
+	  <br>
+	  <input type="radio" id="two" value="Two" v-model="picked">
+	  <label for="two">Two</label>
+	  <br>
+	  <span>Picked: {{ picked }}</span>
+	</div> -->
+	<!-- <div id="example-5">
+	  <select v-model="selected">
+	    <option disabled value="">请选择</option>
+	    <option>A</option>
+	    <option>B</option>
+	    <option>C</option>
+	  </select>
+	  <span>Selected: {{ selected }}</span>
+	</div> -->
+	<!-- <div id="example-6">
+	  <select v-model="selected" multiple style="width: 50px;">
+	    <option>A</option>
+	    <option>B</option>
+	    <option>C</option>
+	  </select>
+	  <br>
+	  <span>Selected: {{ selected }}</span>
+	</div> -->
+	<div id="dome4">
+		<select v-model="selected">
+		  <option v-for="option in options" v-bind:value="option.value">
+		    {{ option.text }}
+		  </option>
+		</select>
+		<span>Selected: {{ selected }}</span>
+	</div>
+
+	<script type="text/javascript">
+	// new Vue({
+	// 	el: '#dome1',
+	// 	data: {
+	// 		checkNames: []
+	// 	}
+	// })
+	// new Vue({
+	//   el: '#example-4',
+	//   data: {
+	//     picked: ''
+	//   }
+	// })
+	// new Vue({
+	//   el: '#example-5',
+	//   data: {
+	//     selected: ''
+	//   }
+	// })
+	// new Vue({
+	//   el: '#example-6',
+	//   data: {
+	//     selected: []
+	//   }
+	// })
+	new Vue({
+	  el: '#dome4',
+	  data: {
+	    selected: 'A',
+	    options: [
+	      { text: 'One', value: 'A' },
+	      { text: 'Two', value: 'B' },
+	      { text: 'Three', value: 'C' }
+	    ]
+	  }
+	})
+
+	</script>
+</body>
+</html>

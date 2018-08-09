@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>html</title>
+<script src="jquery-3.3.1.min.js"></script>
+<style type="text/css">
+	#div1{
+		width: 200px;
+		height: 200px;
+		/*background-color: red;*/
+	}
+	#div2{
+		width: 200px;
+		height: 200px;
+		/*background-color: blue;*/
+	}
+	
+</style>
+</head>
+<body>
+    <p id="div1">德玛西亚</p>
+    <div id="div2"><b>诺克萨斯</b></div>
+    <input type="text" id="div3" value="艾欧尼亚"></input>
+    <a href="#" id="link1" action="delete" rel="nofollow">删除</a><br>
+    <button id="but1">获取div1</button>
+    <button id="but2">获取div2</button>
+    <button id="but3">输入字段的值</button>
+    <button id="but4">a的action属性</button>
+    <button id="but11">更改div1</button>
+    <button id="but22">更改div2</button>
+    <button id="but33">更改输入字段的值</button>
+    <button id="but44">更改a的action属性</button>
+
+    <script>
+    	$("#but1").click(function(){
+    		alert("Text:" + $("#div1").text())
+    	});
+    	$("#but2").click(function(){
+    		alert("HTML:" + $("#div2").html())
+    	});
+    	$("#but3").click(function(){
+    		alert("值为:" + $("#div3").val())
+    	});
+    	$("#but4").click(function(){
+    		alert("action属性:" + $("#link1").attr("action"))
+    	});
+    	$("#but11").click(function(){
+    		$("#div1").text(function(i,origText){
+    			return "旧文本：" + origText + "新文本：啦啦啦德玛西亚";
+    		})
+    	});
+    	$("#but22").click(function(){
+    		$("#div2").html("<h1>诺克萨斯，永垂不朽！</h1>")
+    	});
+    	$("#but33").click(function(){
+    		$("#div3").val("刀锋意志")
+    	});
+    	$("#but44").click(function(){
+    		$("#link1").attr({
+    			"href":"http://www.baidu.com",
+    			"action":"change"
+    		})
+    	});
+    </script>
+</body>
+</html>

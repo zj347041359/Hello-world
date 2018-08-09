@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>插槽1</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+	<div id="div1">
+		<navigation-link >
+		  asd<!-- 替换<slot> -->
+		</navigation-link>
+	</div>
+	</div>
+    <script type="text/javascript" >
+    	Vue.component('navigation-link',{
+    		template:'<a><slot></slot></a>'
+    	})
+    	new Vue({
+    		el:'#div1'
+    	})
+    </script>
+</body>
+</html>

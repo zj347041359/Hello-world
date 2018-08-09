@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	.finished{
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<h1> this is a todo list</h1>
+	<div id="app-1">
+	<ul>
+		<li v-for="item in items" v-bind:class="{finished: item.isFinished}" v-on:click="doThis(item)">
+			{{item.label}}
+		</li>
+	</ul>
+		<input v-model="add" placeholder="edit me" @keyup.enter="onEnter">
+		<p></p>
+	</div>
+
+    <script type="text/javascript">
+    	import fetch from "./.store"
+    	console.log(fetch());
+    	var list1 = new Vue({
+    		el: '#app-1',
+    		data:{
+    			items:[],
+    			add:''
+    		},
+    		watch:{
+    			items: function (items) {
+				    // localStorage.add = items.label ;
+				    // var arr=[];
+    				// for(var i=0;i<items.length;i++){
+			    	// 	// arr[i]=items[i].label;
+			    	// 	arr[i]=items[i];
+			    	// }
+			    	// localStorage.add=arr;
+  				}
+    		},
+    		methods:{
+    			doThis: function(item){
+    				item.isFinished=!item.isFinished;
+    			},
+    			onEnter:function(){
+    				this.items.push({
+    					label: this.add,
+    					isFinished: false
+    				})
+    				this.add='';
+    			}
+    		}
+    	})
+
+    </script>
+</body>
+</html>

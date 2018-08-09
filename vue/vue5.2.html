@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue表单</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+	<div id="blog-post-demo">
+		<blog-post title="My journey with Vue"></blog-post>
+		<blog-post title="Blogging with Vue"></blog-post>
+		<blog-post title="Why Vue is so fun"></blog-post>
+	</div>
+
+	<script type="text/javascript">
+	Vue.component('blog-post',{
+		props:['title'],
+		template:'<h3>{{ title }}</h3>'
+	})
+	new Vue({
+		el: '#blog-post-demo'
+	})
+	</script>
+</body>
+</html>

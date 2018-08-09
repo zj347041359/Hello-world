@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue表单</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+	<div id="components-demo">
+		<button-counter></button-counter>
+	</div>
+
+	<script type="text/javascript">
+	Vue.component('button-counter',{
+		data:function(){
+			return {
+				count: 0
+			}
+		},
+		template:'<button v-on:click="count++">You clicked me {{count}} times.</button>'
+	})
+	new Vue({ el: '#components-demo'})
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>多个过渡</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	.component-fade-enter-active, .component-fade-leave-active {
+	  transition: opacity .3s ease;
+	}
+	.component-fade-enter, .component-fade-leave-to
+	/* .component-fade-leave-active for below version 2.1.8 */ {
+	  opacity: 0;
+	}
+</style>
+</head>
+<body>
+	<div id="transition-components-demo">
+			<input type="radio" value="v-a" id="a" name="view">
+			<label for="a">A</label>
+			<input type="radio" value="v-b" id="b" name="view">
+			<label for="b">B</label>
+		<transition name="component-fade" mode="out-in">
+		  <component v-bind:is="view"></component>
+		</transition>
+	</div>
+    <script type="text/javascript" >
+    	new Vue({
+		  el: '#transition-components-demo',
+		  data: {
+		    view: 'v-a'
+		  },
+		  components: {
+		    'v-a': {
+		      template: '<div>Component A</div>'
+		    },
+		    'v-b': {
+		      template: '<div>Component B</div>'
+		    }
+		  }
+		})
+    </script>
+</body>
+</html>

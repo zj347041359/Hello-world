@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Ajax</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="jquery-3.3.1.min.js"></script>
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <!-- <h2>JQ的Ajax功能</h2>
+    <p id="p1">这是段落的一些文本</p> -->
+    <div id="div1">
+    	<p>这是原文字</p>
+    </div>
+    <button type="button" id="but1">change</button>
+    <script type="text/javascript">
+    	$("#but1").click(function(){
+    		$("#div1").load("demo.txt");
+    		})
+    </script>
+</body>
+</html>

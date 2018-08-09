@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+	<!-- <ul id="vfor" class="dome">
+		<li v-for="(value,key) in object">
+			{{key}}:{{ value }}
+		</li>
+	</ul> -->
+	<!-- <ul id="example-1">
+	  <li v-for="item in items">
+	    {{ item.message }}
+	  </li>
+	</ul> -->
+	<!-- <ul id="number-1">
+		<li v-for="n in even(numbers)">{{n}}</li>
+	</ul> -->
+	<!-- <ul id="number-1">
+		<li v-for="n in 20">{{n}}</li>
+	</ul> -->
+	<!-- <ul id="vfor">
+		<template v-for="item in items">
+			<li>{{item.msg}}</li>
+			<li>{{item.age}}</li>
+		</template> -->
+		<!-- <div id='dome-1'>
+			<button v-on:click="counter += 1">Add 1</button>
+			<P>The button above has been clicked {{counter}} times.</P>
+		</div> -->
+		<!-- <div id='dome-2'>
+			<button v-on:click="greet">Greet</button>
+		</div> -->
+		<div id='dome-3'>
+			<button v-on:click="say('hi')">Say hi</button>
+			<button v-on:click="say('what')">Say what</button>
+		</div>
+
+	<script type="text/javascript">
+	// var app = new Vue({
+	// 	el: '#vfor',
+	// 	data:{
+	// 		object:{
+	// 			firstName:'ONE',
+	// 			lastName:'two',
+	// 			age:'28'
+	// 		}
+	// 	}
+	// })
+	// var example1 = new Vue({
+	//   el: '#example-1',
+	//   data: {
+	//     items: [
+	//       { message: 'Foo' },
+	//       { message: 'Bar' }
+	//     ]
+	//   }
+	// })
+	// example1.items.push({message:'Baz'});
+	// example1.items = example1.items.filter(function(item){
+	// 	return item.message.match(/Foo/);
+	// })
+	// example1.items[3]={message:'666'};
+	// Vue.set(example1.items,3,{message:'333'});
+	// Vue.set(app.object,'height',173);
+	// app.object=Object.assign({},app.object,{
+	// 	number:23,
+	// 	gender:'male'
+	// })
+
+	// var number1 = new Vue({
+	// 	el:'#number-1',
+	// 	data:{
+	// 		numbers:[1,2,3,4,5]
+	// 	},
+	// 	methods:{
+	// 		even: function(numbers){
+	// 			return numbers.filter(function(number){
+	// 				return number % 2 === 0
+	// 			})
+	// 		}
+	// 	}
+	// 	})
+	// var number1 = new Vue({
+	// 	el:'#number-1',
+	// 	data:''
+	// })
+	// var vfor1 = new Vue({
+	// 	el:'#vfor',
+	// 	data:{
+	// 		items:[
+	// 			{
+	// 			msg:253,
+	// 			age:16
+	// 			},
+	// 			{
+	// 			msg:256,
+	// 			age:18}]
+	// 	}
+	// })
+	// var dome1 = new Vue({
+	// 	el:'#dome-1',
+	// 	data:{
+	// 		counter:0
+	// 	}
+	// })
+	//  var dome2 = new Vue({
+	// 	el:'#dome-2',
+	// 	data:{
+	// 		name:'Vue.js'
+	// 	},
+	// 	methods:{
+	// 		greet:function(event){
+	// 			alert('Hello'+this.name+'!')
+	// 			if(event){
+	// 				alert(event.target.tagName)
+	// 			}
+	// 		}
+	// 	}
+	// })
+	var dome3 = new Vue({
+		el:'#dome-3',
+		methods:{
+			say:function(message){
+				alert(message)
+			}
+		}
+	})
+
+	</script>
+</body>
+</html>
