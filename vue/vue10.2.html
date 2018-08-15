@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>路由</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="vue.js" ></script>
+<script src="vue-router.js" ></script>
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	nav{
+		display: block;
+		border: 2px solid blue;
+	}
+	footer{
+		display: block;
+		border: 2px solid blue;
+	}
+</style>
+</head>
+<body>
+   <div id="app">
+    	<nav>
+    		<ul>
+    			<li>
+    				<router-link to="/user/nav">/user/nav</router-link>
+    			</li>
+    			<li>
+    				<router-link to="/user/nav/profile">/user/nav/profile</router-link>
+    			</li>
+    		</ul>
+    	</nav>
+    	<router-view></router-view>
+    	<footer>
+    		<ul>
+    			<li>
+    				<router-link to="/user/foo">/user/foo</router-link>
+    			</li>
+    			<li>
+    				<router-link to="/user/foo/posts">/user/foo/posts</router-link>
+    			</li>
+    		</ul>
+    	</footer>
+    </div>
+    <script type="text/javascript">
+		// const Nav = { template: '<h1>德玛西亚</h1>'}
+		// const Foo = { template: '<h3>诺克萨斯</h3>'}
+		// const routes = [
+		// 	{ path: '/nav', component: Nav},
+		// 	{ path: '/Foo', component: Foo}
+		// ]
+		// const router = new VueRouter({
+		// 	routes
+		// })
+		// const app = new Vue({
+		// 	router
+        // }).$mount('#app')
+        const User = {
+            template: '<div class="user"><h2>User {{$route.params.id }}</h2><router-view></router-view></div>'
+        }
+        const UserProfile = {
+        	template: '<div>Profile</div>'
+        }
+        const UserPosts = {
+        	template: '<div>Posts</div>'
+        }
+        const router = new VueRouter({
+            routes:[
+	            { path: '/user/:id', component: User,
+		            children: [
+			            {
+			            	path: 'profile',
+			            	component: UserProfile
+			            },
+			            {
+			            	path: 'posts',
+			            	component: UserProfile
+			            }
+		            ]
+	        	}
+            ]
+        })
+        const app = new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</body>
+</html>
+</body>
+</html>

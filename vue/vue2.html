@@ -47,11 +47,10 @@
 	<div id="app-1">
 	<ul>
 		<li v-for="(item,index) in items" v-bind:class="{finished: item.isFinished}" v-on:click="doThis(item)">
-			{{index+1}}-{{item.label}}
+			{{index+1}}、{{item.label}}
 		</li>
 	</ul>
 		<input v-model="add" placeholder="edit me" @keyup.enter="onEnter">
-		<p></p>
 	</div>
 
     <script type="text/javascript">
@@ -84,7 +83,6 @@
     					label: this.add,
     					isFinished: false
     				})
-    				console.log(this.items[0].label);
     				this.add='';
 
     			}

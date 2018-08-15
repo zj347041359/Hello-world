@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>路由</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="vue.js" ></script>
+<script src="vue-router.js" ></script>
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+		      <h1>Named Routes</h1>
+		      <p>Current route name: {{ $route.name }}</p>
+		      <ul>
+		        <li><router-link :to="{ name: 'home' }">home</router-link></li>
+		        <li><router-link :to="{ name: 'foo' }">foo</router-link></li>
+		        <li><router-link :to="{ name: 'bar', params: { id: 123 }}">bar</router-link></li>
+		        <li><router-link :to="{ name: 'bar', params: { id: 957 }}">bar</router-link></li>
+		      </ul>
+		      <router-view class="view"></router-view>
+		    </div>
+    <script type="text/javascript">
+
+		Vue.use(VueRouter)
+
+		const Home = { template: '<div>This is Home</div>' }
+		const Foo = { template: '<div>This is Foo</div>' }
+		const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
+
+		const router = new VueRouter({
+			  	routes: [
+			    { path: '/', name: 'home', component: Home },
+			    { path: '/foo', name: 'foo', component: Foo },
+			    { path: '/bar/:id', name: 'bar', component: Bar }
+			  ]
+			})
+
+		new Vue({
+		  router
+		}).$mount('#app')
+    </script>
+</body>
+</html>

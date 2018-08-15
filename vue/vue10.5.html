@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>路由</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="vue.js" ></script>
+<script src="vue-router.js" ></script>
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	.view-one{
+		width: 100px;
+		height: 100px;
+		border:2px solid blue;
+	}
+</style>
+</head>
+<body>
+    <div id="app">
+		      <h1>Named Routes</h1>
+		      <p>Current route name: {{ $route.name }}</p>
+		      <ul>
+		        <li><router-link to="/">home</router-link></li>
+		        <li><router-link to="/one">one</router-link></li>
+		        <li><router-link to="/two/123">two</router-link></li>
+		        <li><router-link to="/two/957">two</router-link></li>
+		      </ul>
+		      <router-view ></router-view>
+		    </div>
+    <script type="text/javascript">
+
+		Vue.use(VueRouter)
+
+		const Home = { template: '<div><h1>This is Home</h1><router-view ></router-view><router-view name="a"></router-view></div>' }
+		const One = { template: '<h2>This is One</h2>' }
+		const Two = { template: '<h3 class="view-one"> {{ $route.params.id }}</h3>' }
+		const Three = { template:'<h4 name="a">This is two</h4>'}
+		const five = {template: '<h5>This is five</h5>'}
+		const router = new VueRouter({
+			  	routes: [{
+				    path: '/', name: 'home', component:Home,
+					    children: [
+						    {path: '/one', name: 'one', component:One,},
+						    { path: '/two/:id', name: 'two', components:{
+						    	default: Two,
+						    	a: Three
+							}}
+						]
+				    }]
+				})
+
+		new Vue({
+		  router
+		}).$mount('#app')
+    </script>
+</body>
+</html>

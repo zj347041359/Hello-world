@@ -10,16 +10,14 @@
 <link href="" rel="stylesheet">
 </head>
 <body>
-    <!-- <h2>JQ的Ajax功能</h2>
-    <p id="p1">这是段落的一些文本</p> -->
-    <div id="div1">
-    	<p>这是原文字</p>
-    </div>
-    <button type="button" id="but1">change</button>
+    
+    <button type="button" id="but1">发送HTTP GET 请求并获取返回结果</button>
     <script type="text/javascript">
     	$(document).ready(function(){
     		$("#but1").click(function(){
-    			$("#div1").load("demo.txt #nav");
+    			$.get("demo_test.php",function(echo,status){
+                    alert("数据：" + echo + "\n状态：" +status)
+                });
     		});
     	})
     	
