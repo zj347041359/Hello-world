@@ -47,3 +47,12 @@
 			background-color: #fff;
 			color: #5fc0cd;
 		}
+		.map{
+			width: 0.37rem;
+			height: 0.39rem;
+			position: absolute;
+			top: 0.20rem;
+			right: 0.27rem;
+			background-image: url("../img/map.jpg");
+			background-size: 0.37rem 0.39rem;
+		}
