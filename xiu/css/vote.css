@@ -31,7 +31,6 @@
 			left: 0px;
 			width: 100%;
 			background-color: #fff;
-			/*z-index: 1;*/
 		}
 	.navtopmargin{
 		margin: 0;
@@ -60,12 +59,85 @@
 	.content{
 		background-color: #f0f0f0;
 	}
+	.contents{
+		padding: 0.26rem 0.35rem 0.61rem 0.35rem;
+	}
 	.lastplay{
 		background-color: #fff;
-		margin: 0.32rem 0.35rem 0 0.35rem;
 		border: 0.01rem solid #c9c9c9;
 		height: 0.83rem;
+		text-align: center;
+		line-height: 0.83rem;
 	}
-	.goback{
+	.lastplay p{
+		color: #9a9a9a;
+		font-size: 0.34rem;
+		letter-spacing: 0.04rem;
+		font-family: "HiraginoSansGB";
+		display: inline-block;
+	}
+	.goin{
+		border-right: 0.04rem solid #e7e7e7;
+        border-top: 0.04rem solid #e7e7e7;
+        height: 0.22rem;
+        width: 0.22rem;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        display: inline-block;
+	}
+	.game{
+		margin-top:0.26rem;
+		background-color: #fff;
+		border: 0.01rem solid #c9c9c9;
+	}
+	.column{
+		border-bottom: 0.02rem solid #fde1ae;
 		
+	}
+	.column p{
+		color: #fbb435;
+		font-size: 0.38rem;
+		letter-spacing: 0.04rem;
+		text-align: center;
+		line-height: 0.88rem;
+	}
+	.version{
+		margin-top:0.3rem;
+		position: relative;
+		text-align: center;
+	}
+	.version div{
+		margin-left: 0.64rem;
+		margin-right: 0.70rem;
+		background-color: #69d1e9;
+		letter-spacing: 0.04rem;
+		line-height: 1.35rem;
+		font-size: 0.32rem;
+		color:#fff;
+	}
+	.version p{
+		font-size: 0.24rem;
+		margin: 0.28rem 0;
+	}
+	.next{
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-bottom: 0.28rem solid transparent;
+		border-top: 0.28rem solid transparent;
+		border-left: 0.28rem solid #fbb435;
+		position: absolute;
+		top: 2.65rem;
+		right: 0.08rem;
+	}
+	.version li{
+		list-style-type: none;
+		width: 0.17rem;
+		height: 0.17rem;
+		border-radius: 0.17rem;
+		background-color: #f0f0f0;
+		display: inline-block;
+	}
+	li:first-child{
+		background-color: #69d1e9;
 	}
