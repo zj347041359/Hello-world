@@ -42,7 +42,7 @@
 	}
 	.home{
 		position: absolute;
-		bottom: 0.11rem;
+		bottom: 0.20rem;
 		left: 0.20rem;
 		width:0.51rem;
 		height: 0.42rem;
@@ -68,4 +68,75 @@
 	.none{
 			height:0.68rem;
 			width: 100%;
-		}	
+		}
+	.content{
+		/*padding: 0 0.7rem;*/
+	}
+	.result{
+		background-color: #29bde0;
+		padding: 0 0.7rem;
+		border-bottom:0.01rem solid #ddd;
+	}	
+	img{
+		margin-top: 0.24rem;
+		margin-left: 0.73rem;
+		height: 2.05rem;
+		width: 3.5rem;
+		
+	}
+	.evaluation{
+		font-size: 0.33rem;
+		color: #ffc865;
+		padding: 0.1rem 0.02rem;
+		letter-spacing:0.01rem;
+	}
+	.result1{
+		color: #fff;
+		font-size: 0.26rem;
+		letter-spacing:0.01rem;
+		padding: 0.1rem 0.02rem;
+	}
+	.day{
+		padding: 0.1rem 0.7rem;
+		border-bottom: 0.01rem solid #ddd;
+	}
+	.whatday{
+		font-size: 0.3rem;
+		letter-spacing:0.02rem;
+	}
+	.whattime{
+		font-size: 0.2rem;
+		color:#d6d6d6;
+		float: right;
+	}
+	.day p{
+		font-size: 0.26rem;
+		letter-spacing: 0.03rem;
+		color:#a6a6a6;
+		padding-bottom: 0.15rem;
+	}
+	footer{
+		height: 1.29rem;
+		width: 100%;
+		background-color: rgba(153,223,240,0.8);
+		position: fixed;
+		bottom:0;
+		font-size: 0.4rem;
+		padding:0.24rem;
+	}
+	footer a{
+		color:#fff;
+		display: inline-block;
+		width:2.7rem;
+		height: 0.8rem;
+		border-radius: 0.08rem;
+		text-align: center;
+		line-height: 0.8rem;
+	}
+	.again{
+		background-color: #f66f6f;
+	}
+	.share{
+		margin-left: 0.39rem;
+		background-color: #fbb435;
+	}

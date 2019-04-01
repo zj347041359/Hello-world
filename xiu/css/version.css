@@ -142,3 +142,6 @@
 	li:first-child{
 		background-color: #69d1e9;
 	}
+	li:hover {
+		background-color: #69d1e9;
+	}
