@@ -43,3 +43,123 @@
 	@media screen and (min-width: 3520px) {html{font-size:550px;}}
 	@media screen and (min-width: 3840px) {html{font-size:600px;}}
 	@media screen and (min-width: 4160px) {html{font-size:650px;}}
+
+.contact{
+	height: 0.13rem;
+	width: 100%;
+	line-height: 0.13rem;
+	padding:0 1.2rem;
+}
+.contact p{
+	font-family: 微软雅黑;
+	color:#29b078;
+	font-size: 0.037rem;
+	display: inline-block;
+}
+.contact span {
+	float: right;
+}
+.contact a{
+	background-image: url("../img/contact.png");
+	background-size: 0.24rem 0.08rem;
+	display: inline-block;
+	width: 0.08rem;
+	height: 0.08rem;
+	margin-left: 0.05rem;
+}
+.qq{
+	background-position: -0.16rem 0;
+}
+.wb{
+	background-position: -0.08rem 0;
+}
+.navigation{
+	height: 0.33rem;
+	background-color: #29b078;
+	padding-right: 1.1rem;
+	line-height: 0.32rem;
+}
+.navigation ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+	
+}
+.navigation li{
+	display: inline-block;
+	text-align: center;
+	float: right;
+	width: 0.34rem;
+	font-family: 微软雅黑;
+	font-size:0.053rem;
+	color: #fff;
+}
+
+.navigation li:hover{
+	border-bottom: 0.013rem solid #fff;
+}
+.navigation li:last-child{
+	border-bottom: 0.013rem solid #fff;
+}
+.navigation a{
+	color:#fff;
+}
+.shuffling{
+	height: 2rem;
+	background-color: #999999;
+	display: inline-block;
+}
+.abstract{
+	padding-top:0.54rem;
+	margin:0 1.3rem;
+	height: 0.88rem
+	/*display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;*/
+}
+.abstract span{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+.abstract span div{
+	height: 0.22rem;
+	width: 0.2rem;
+	background-image: url(../img/abstract.png);
+	background-size: 0.65rem 0.22rem;
+	background-color: red;
+	
+}
+.abstract span p{
+	font-size:0.05rem;
+	font-family: 微软雅黑;
+	color:#999;
+	display: block;
+}
+.abstract span h1{
+	font-size:0.06rem;
+	font-family: 微软雅黑;
+	color:#333;
+	
+}
+.num span{
+	flex-direction: row;
+}
+.num span span{
+	display: inline-block;
+	height: 0.05rem;
+	width:0.05rem;
+	background-image: url(../img/xiaoren.png);
+	background-size: 0.05rem 0.05rem;
+	
+}
+.num span b{
+	display: inline-block;
+	color: #53af86;
+	font-size: 0.06rem;
+	font-family: 微软雅黑;
+}
