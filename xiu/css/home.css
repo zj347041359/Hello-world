@@ -49,6 +49,7 @@
 	width: 100%;
 	line-height: 0.13rem;
 	padding:0 1.2rem;
+	background-color: #fafafa;
 }
 .contact p{
 	font-family: 微软雅黑;
@@ -113,57 +114,57 @@
 	padding-top:0.54rem;
 	margin:0 1.3rem;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	align-content: center;
 }
 .gaoxiao,.guifan,.renmai{
-	height: 0.89rem;
 	width: 1.04rem;
+	padding:0.02rem 0.14rem;
 	display: inline-block;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
+	flex-direction: column;   
+	justify-content: flex-start;
+	align-items: center;
 }
 .xian{
 	display: inline-block;
-	height: 0.34rem;
-	border-left: 1px solid #dedede;
+	height: 0.88rem;
+	border-left: 1px dashed #dedede;
 }
-.abstract span div{
+.icon{
 	height: 0.22rem;
 	width: 0.2rem;
 	background-image: url(../img/abstract.png);
 	background-size: 0.65rem 0.22rem;
-	background-color: red;
-	
 }
-.abstract span p{
+.ordinary{
 	font-size:0.05rem;
 	font-family: 微软雅黑;
 	color:#999;
 	display: block;
 }
-.abstract span h1{
+.abstract b{
 	margin: 0;
 	font-size:0.06rem;
 	font-family: 微软雅黑;
 	color:#333;
-	
+	margin-top:0.08rem;
+	margin-bottom: 0.09rem;
 }
 .num{
-	
-	padding-left: 2px;
+	padding-top:0.20rem;
+	padding-left: 0.18rem;
 	width: 0.87rem;
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 .num span{
-	/*padding-top:0.22rem;
-	padding-left: 0.12rem;*/
 	flex-direction: row;
 }
-.num span span{
+.num span div{
 	display: inline-block;
 	height: 0.05rem;
 	width:0.05rem;
@@ -176,10 +177,46 @@
 	color: #53af86;
 	font-size: 0.06rem;
 	font-family: 微软雅黑;
+	margin:0;
 }
 .num p{
 	font-size:0.05rem;
 	font-family: 微软雅黑;
 	color:#999;
 	display: block;
+}
+.tit{
+	margin-top: 0.33rem;
+	font-size:0.06rem;
+	font-family: 微软雅黑;
+	text-align: center;
+	color:black;
+	font-weight: bold;
+}
+.way{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:0 1.26rem;
+}
+.number{
+	width: 0.25rem;
+	height: 0.25rem;
+	border:0.004rem solid #efeeee;
+	border-radius: 0.125rem;
+	color:#29b078;
+	text-align: center;
+	line-height: 0.25rem;
+	display: inline-block;
+}
+.way p{
+	width: 0.60rem;
+	font-size:0.05rem;
+	font-family: 微软雅黑;
+	color: #999;
+	margin-left: 0.06rem;
+}
+.arrow{
+	margin-right: 0.06rem;
+	margin-left:  0.11rem;
 }
