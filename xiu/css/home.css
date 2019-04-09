@@ -112,19 +112,24 @@
 .abstract{
 	padding-top:0.54rem;
 	margin:0 1.3rem;
-	height: 0.88rem
-	/*display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;*/
-}
-.abstract span{
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
+}
+.gaoxiao,.guifan,.renmai{
+	height: 0.89rem;
+	width: 1.04rem;
+	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+.xian{
+	display: inline-block;
+	height: 0.34rem;
+	border-left: 1px solid #dedede;
 }
 .abstract span div{
 	height: 0.22rem;
@@ -141,12 +146,21 @@
 	display: block;
 }
 .abstract span h1{
+	margin: 0;
 	font-size:0.06rem;
 	font-family: 微软雅黑;
 	color:#333;
 	
 }
+.num{
+	
+	padding-left: 2px;
+	width: 0.87rem;
+	display: inline-block;
+}
 .num span{
+	/*padding-top:0.22rem;
+	padding-left: 0.12rem;*/
 	flex-direction: row;
 }
 .num span span{
@@ -162,4 +176,10 @@
 	color: #53af86;
 	font-size: 0.06rem;
 	font-family: 微软雅黑;
+}
+.num p{
+	font-size:0.05rem;
+	font-family: 微软雅黑;
+	color:#999;
+	display: block;
 }
