@@ -47,9 +47,9 @@
 .contact{
 	height: 0.13rem;
 	width: 100%;
-	line-height: 0.13rem;
 	padding:0 1.2rem;
 	background-color: #fafafa;
+	line-height: 0.13rem;
 }
 .contact p{
 	font-family: 微软雅黑;
@@ -58,6 +58,7 @@
 	display: inline-block;
 }
 .contact span {
+	margin-top: 0.025rem;
 	float: right;
 }
 .contact a{
@@ -105,6 +106,9 @@
 .navigation a{
 	color:#fff;
 }
+.content{
+	background-color: #fafafa;
+}
 .shuffling{
 	height: 2rem;
 	background-color: #999999;
@@ -112,7 +116,7 @@
 }
 .abstract{
 	padding-top:0.54rem;
-	margin:0 1.3rem;
+	margin:0 1.2rem;
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -120,7 +124,6 @@
 .gaoxiao,.guifan,.renmai{
 	width: 1.04rem;
 	padding:0.02rem 0.14rem;
-	display: inline-block;
 	display: flex;
 	flex-direction: column;   
 	justify-content: flex-start;
@@ -192,6 +195,7 @@
 	text-align: center;
 	color:black;
 	font-weight: bold;
+	margin-bottom: 0.22rem;
 }
 .way{
 	display: flex;
@@ -199,15 +203,19 @@
 	align-items: center;
 	margin:0 1.26rem;
 }
-.number{
+
+.circle{
 	width: 0.25rem;
 	height: 0.25rem;
+}
+.number{
 	border:0.004rem solid #efeeee;
 	border-radius: 0.125rem;
 	color:#29b078;
 	text-align: center;
 	line-height: 0.25rem;
 	display: inline-block;
+	background-color: #fff;
 }
 .way p{
 	width: 0.60rem;
@@ -218,5 +226,119 @@
 }
 .arrow{
 	margin-right: 0.06rem;
-	margin-left:  0.11rem;
+	margin-left: 0.06rem;
+	max-height: 0.09rem;
+	max-width: 0.10rem;
+}
+.students{
+	margin:0 1.2rem;
+}
+.student{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.stu{
+	width: 0.91rem;
+	padding:0.06rem 0.10rem 0 0.10rem;
+	border:0.004rem solid #eeeded;
+	background-color: #fff;
+	margin-right: 0.13rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.heads{
+	height: 0.36rem;
+	width: 0.36rem;
+	background-image: url("../img/heads.png");
+	background-size: 1.44rem 0.36rem;
+	background-position: -0.72rem 0;
+}
+.head1{
+	background-position: -1.08rem 0;
+}
+.head2{
+	background-position: 0 0;
+}
+.head3{
+	background-position: -0.36rem 0;
+}
+.position{
+	font-family: 微软雅黑;
+	font-size: 0.06rem;
+	font-weight: bold;
+	color:#333;
+}
+.detailed{
+	font-family: 微软雅黑;
+	font-size:0.05rem;
+	color:#999;
+}
+.students ul{
+	padding:0;
+	text-align: center;
+	margin-top: 0.03rem;
+}
+.students li{
+	list-style-type: none;
+	width: 0.04rem;
+	height: 0.04rem;
+	border-radius: 0.02rem;
+	background-color: #fff;
+	display: inline-block;
+}
+.students li:first-child{
+	background-color: #29b078;
+}
+.students li:hover {
+	background-color: #29b078;
+}
+.enterprise{
+	margin:0 1.2rem;
+}
+.enterprise ul{
+	height: 0.60rem;
+	padding:0;
+	text-align: center;
+	background-color: #fff;
+	display: flex;
+	box-shadow: 0 0 2px #f5f5f5;
+}
+.enterprise li{
+	list-style-type: none;
+	height: 100%;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.enterprise li div{
+	background-image: url("../img/enterprise.png");
+	background-size: 2.16rem 0.21rem;
+	height: 0.21rem;
+}
+.albb div{
+	width: 0.49rem;
+	background-position:-1.1rem 0;
+}
+.jsy div{
+	width: 0.19rem;
+	background-position:0 0;
+}
+.hx div{
+	width: 0.47rem;
+	background-position:-0.62rem 0;
+}
+.rl div{
+	width: 0.57rem;
+	background-position:-1.59rem 0;
+}
+.qny div{
+	width: 0.43rem;
+	background-position:-0.19rem 0;
+}
+.hx{
+	box-shadow: 0 0 0.03rem #f5f5f5;
 }
