@@ -350,14 +350,51 @@
 }
 .link li{
 	color: #999;
-	/*display: inline-block;*/
 }
 .link li a{
 	font-size: 0.05rem;
 	font-family: 微软雅黑;
-	color: #999;
-	text-decoration: none;
-}
+	color: #999;}
 .link li:hover{
 	border-bottom: 1px solid #26a26f;
+}
+footer{
+	background-color: #26a26f;
+	color:#fff;
+}
+footer div{
+	display: inline-block;
+}
+.foo{
+	padding: 0 0.2rem;
+	height: 0.57rem;
+}
+footer a{
+	color: #fff;
+	font-size: 0.04rem;
+	
+}
+footer p{
+	font-size: 0.05rem;
+	font-family: 微软雅黑；
+}
+.jns{
+	
+}
+
+.jns a{
+	
+}
+.gzh img{
+	width: 0.31rem;
+	height: 0.31rem;
+	max-width: 100%;
+	max-height: 100%;
+}
+.beianhao{
+	width: 100%;
+	line-height: 0.10rem;
+	text-align: center;
+	border-top: 1px solid #32c086
+
 }

@@ -8,103 +8,107 @@
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
 <style type="text/css" media="screen">
-	/*.b{
-		visibility: hidden;
-	}
-	.a:hover .b{
-		visibility: visible;
-	}
-	audio{
-		width: 65px;
-		opacity: 0;
-	}*/
-	/*header,footer,main{
-		display: block;
-	}
-	footer{
-		position: fixed;
-		height: 34px;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: red;
-	}
-	main{
-		margin:34px;
-		height: 2000px;
-	}*/
-	.one{
-		height: 400px;
-		width: 400px;
-		border:5px solid blue;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-	}
-	.two{
-		height: 100px;
-		width: 100px;
-		border:5px solid green;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-	}
-	.three{
-		height: 20px;
-		width: 20px;
-		border:5px solid red;
-	}
+
 </style>
 </head>
 <body>
-	<!-- <div class="bian">
-		<div class="a">
-			<div>A</div>
-			<div class="b">b</div>
-		</div>
-	</div>
-	<audio src="财富自由.mp3" controls>
-		
-	</audio> -->
-	<!-- <main>
-		<input type="text" name="" placeholder="Footer..">
-		<button type="" class="submit">提交</button>
-	</main>
-	<footer>
-		
-	</footer> -->
-<div class="one">
-	<div class="two">
-		<span class="three"></span>
-		<div class="three"></div>
-		<div class="three"></div>
-	</div>
-	<div class="two">
-		<div class="three"></div>
-		<a class="three"></a>
-		<div class="three"></div>
-	</div>
-	<div class="two">
-		<div class="three"></div>
-		<div class="three"></div>
-		<p class="three"></p>
-	</div>
-	<div class="two">
-		<div class="three"></div>
-		<div class="three"></div>
-		<div class="three"></div>
-	</div>
-</div>
 
     <script type="text/javascript" charset="utf-8" async defer>
-    	function fb(n){
-    		if(n==1 || n==2){
-    			return 1;
-    		}
-    		return fb(n-1)+fb(n-2);
-    	}
+    	// function fb(n){
+    	// 	if(n==1 || n==2){
+    	// 		return 1;
+    	// 	}
+    	// 	return fb(n-1)+fb(n-2);
+    	// }
+    	// function a() {
+    	// 	function b(){
+    	// 		var bb = 234;
+    	// 	}
+    	// 	var aa = 123;
+    	// 	b();
+    	// }
+    	// a();
+    	// console.log(bb);
+		// var num = 100;
+		// function a() {
+		// 	function b() {
+		// 	num ++;
+		// 	console.log(num);
+		// 	}
+		// 	return b;
+		// }
+		// var dome = a();
+		// dome();
+		// dome();
+
+		// function test() {
+		// 	var arr = [];
+		// 	for(var i = 0; i < 10; i ++){
+		// 		(function (j) {
+		// 			arr[j] = function(){
+		// 				console.log(j + " ");
+		// 			}
+		// 		}(i));
+		// 	}
+		// 	return arr;
+		// }
+		// var myarr = test();
+		// for(var j = 0; j < 10; j++){
+		// 	myarr[j]();
+		// }
+
+		// var user = "duyijiaoyu";
+		// function changeUser() {
+		// 	user ='majiang';
+		// 	return;
+		// 	function user(){
+		// 		console.log('userhanshu');
+		// 	}
+		// }
+		// changeUser();
+		// console.log(user);
+
+		// var str = "osn;iajid德玛西亚"
+		// function bytesLength(str){
+		// 	// var count = str.length;
+		// 	// for(var i = 0;i<str.length;i++){
+		// 	// 	if(str.charCodeAt(i) > 255){
+		// 	// 		count ++;
+		// 	// 	}
+		// 	// }
+		// 	// console.log(count);
+
+		// 	var count = 0;
+		// 	for(var i = 0; i < str.length; i ++){
+		// 		if(str.charCodeAt(i) > 255){
+		// 			count += 2;
+		// 		}else{
+		// 			count ++;
+		// 		}
+		// 	}
+		// 	console.log(count);
+		// }
+		// bytesLength(str);
+
+		// Num.prototype = {
+		// 	name : function () {
+		// 		return "666";
+		// 	}
+		// }
+		// function Num () {
+		// 	this.name = "aj";
+		// 	this.age = 24;
+		// 	this.sex = "man";
+		// }
+		// var num = new Num();	
+		// console.log(num);
+
+		var obj = Object.create(null);
+		// document.write(obj);
+		obj.toString = function () {
+			return "其实是调用toString";
+		}
+		document.write(obj);
     </script>
 </body>
 </html>
