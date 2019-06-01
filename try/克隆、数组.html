@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        // var obj = {
+        //     name : 'dmxy',
+        //     age : 2019,
+        //     sex : 'male',
+        //     arr : [1,2,3,4]
+        // }
+        // var obj1 = {};
+         //浅层克隆，为引用值
+        // function clone(origin, target){
+        // 	var target = target || {};
+        // 	for(var key in origin){
+        // 		target[key] = origin[key];
+        // 	}
+        // 	return target;
+        // }
+        // clone(obj,obj1);
+
+        //深度克隆，
+        // function maxclone(origin,target){
+        //     var target = target || {},
+        //         toStr = Object.prototype.toString,
+        //         arrStr = '[object Array]';
+        //     for(var key in origin){
+        //         if(origin[key] !== 'null' && origin.hasOwnProperty(key)){
+        //             if(typeof(origin[key]) =='object'){
+        //                 // if(toStr.call(origin[key]) == arrStr){
+        //                 //     target[key] = [];
+        //                 // }else{
+        //                 //     target[key] = {};
+        //                 // }
+        //                 target[key] = (toStr.call(origin[key]) == arrStr)? [] : {};
+        //                 //用三目运算符简化
+        //                 maxclone(origin[key], target[key]);
+        //             }else{
+        //                 target[key] = origin[key];
+        //             }
+        //         }
+        //     }
+        //     return target;
+        // }
+        // maxclone(obj,obj1);
+
+        //三目运算符
+        //条件判断?是:否，并且返回值
+        // var num = 1 > 0 ? 2 : 3;
+        // console.log(num);
+
+        var arr = [11,4,11,9,4,11,3,21,21,15,3,9];
+        //数组方法
+        //能改变原数组
+        //push(),pop()//在数组最后一位增加和删除
+        //shift(),unshift//在数组第一位删除或者增加
+        //reverse()逆转数组顺序
+        //splice(a,b,c)//从第几位开始，截取多少长度，在切口处添加新的数据，可以改变也可以不改变原数组
+        //sort()将数组以字符排序
+
+        //不改变原数组
+        //concat()//连接两个或多个数组
+        //join()//用传入参数连接数组所有元素形成一个字符串
+        //toString()
+        //slice()
+        var arr1 = arr.join('-');
+        console.log(arr1);
+
+        //split()//字符串方法，与join()互逆
+        // arr.sort(function(a,b){
+        //     // if(a > b){
+        //     //     return -1;
+        //     // }else{
+        //     //     return 1;
+        //     // }
+        //     //return a-b;//升序
+        //     //return b-a;//降序
+        //     return Math.random() - 0.5;//乱序
+        // });
+
+        // var dmxy = {
+        //     num : 20
+        // }
+        // var nkss = {
+        //     num : 36
+        // }
+        // var aony = {
+        //     num : 29
+        // }
+        // var arr =[dmxy,nkss,aony];
+        // arr.sort(function(a,b){
+        //     return a.num - b.num;
+        // });
+
+        //返回字符串字节长度
+        // function retBytes(str) {
+        //     var num = str.length;
+        //     for(var i = 0; i < str.length; i++){
+        //         if(str.charCodeAt(i) > 255){
+        //             num ++;
+        //         }
+        //     }
+        //     return num;
+        // }
+       
+
+        //1.必须写两形参   
+        //2.返回值，返回值为负数时，前面的数放在前面，为正数时，后面是数放在前面，为0时，不动
+        
+        // splice = function(pos) {
+        //     pos += pos > 0 ? 0:this.length;
+        // }
+
+        //类数组
+        var obj = {
+            '2' : 'a',
+            '3' : 'b',
+            'length' : 2,
+            'push' : Array.prototype.push
+        }
+        // obj.push('c');
+        // obj.push('d');
+
+        //判断类型
+        function type(target){
+            var ret = typeof(target);
+            var template = {
+                '[object Array]' : 'array',
+                '[object Object]' : 'object',
+                '[object Number]' : 'number - object',
+                '[object Boolean]' : 'boolean - object',
+                '[object String]' : 'string - object'
+            }
+            if(target == null){
+                return null;
+            }
+            if(ret !== 'object'){
+                return ret;
+            }else{
+                var str = Object.prototype.toString.call(target);
+                return template[str];
+            }
+        }
+
+            //数据去重
+            function unrepeat(array){
+                for(var i = 0; i < array.length - 1; i++){
+                    for(var j = 1; j < array.length; j++){
+                        if(array[j] === array[i]){
+                           array.splice(j,1);
+                        }
+                    }
+                }
+                return array;
+            }
+    </script>
+</body>
+</html>

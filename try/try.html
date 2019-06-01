@@ -103,12 +103,183 @@
 		// var num = new Num();	
 		// console.log(num);
 
-		var obj = Object.create(null);
+		// var obj = Object.create(null);
+		// // document.write(obj);
+		// obj.toString = function () {
+		// 	return "其实是调用toString";
+		// }
 		// document.write(obj);
-		obj.toString = function () {
-			return "其实是调用toString";
-		}
-		document.write(obj);
+
+		// function Person(name, age) {
+		// 	this.name = name;
+		// 	this.age = age;
+		// }
+		// var person = new Person('deng', 100);
+		// var obj = {
+
+		// }
+		// Person.call(obj, 'cheng', 300);//call改变this指向
+		// console.log(obj);
+
+		// Father.prototype.lastName = 'wang';
+		// function Father() {
+		// }
+		// function Son() {
+		// }
+		// function inherit(Target, Origin) {
+		// 	Target.prototype = Origin.prototype;
+		// }//两个构造函数共有一个原型
+		// inherit(Son,Father);
+		// var son = new Son();
+		// console.log(son.lastName);
+		 
+		// Father.prototype.lastName = 'wang';
+		// function Father() {
+		// }
+		// function Son() {
+		// }
+		// function inherit(Target, Origin) {//圣杯模式
+		// 	function F() {};
+		// 	F.prototype = Origin.prototype;
+		// 	Target.prototype = new F();
+		// 	Target.prototype.constuctor = Target;
+		// 	Target.prototype.uber = Origin.prototype;
+		// 	// Target.prototype = Origin.prototype;
+		// }//加一个中间函数使得更改Son函数原型时不会影响Father函数原型
+		// inherit(Son,Father);
+		// var son = new Son();
+		// console.log(son.lastName);
+
+		// 	var obj = {
+		// 		name : 'zj',
+		// 		age : 24,
+		// 		sex : 'male',
+		// 		height : 175,
+		// 		weight : 85
+		// 	}
+		// 	 for( var prop in obj){
+		// 		 console.log(prop+":"+obj[prop]);
+		// 	 }//枚举对象的属性
+
+		// 	var obj = {
+		// 		name : 'zj',
+		// 		age : 24,
+		// 		sex : 'male',
+		// 		height : 175,
+		// 		weight : 8,
+		// 		__proto__ : {
+		// 			lastName : 'deng'
+		// 		}
+		// 	}
+		// 	Object.prototype.abc = '123';
+		// 	 for( var prop in obj){
+		// 		 if(!obj.hasOwnProperty(prop)){
+		// 			 console.log(prop+":"+obj[prop]);
+		// 		 }//hasOwnProperty()判断对象的属性是自己的还是原型的
+		// 	 }//枚举对象的原型的属性
+
+		// 		A instanceof B 
+		// 		看A对象的原型链上有没有B的原型
+
+			//B.apply(A,arguments)//只能有两个参数，新的this对象和参数数组
+			//B.call(A,arg1,arg2,arg3)//能有多个参数，新的this对象和一串参数列表
+		
+		// var a = 1,y = z = 0;
+		// function add(n){
+		// 	foo.apply(null,arguments);
+		// 	return n = n + 3;
+
+		// }
+		// y = add(a);
+		// z = add(a);
+		// console.log(a + " " + y + ' ' + z);
+
+		// function foo(){
+		// 	console.log(arguments);s
+		// }
+		// foo(1,2,2,1,3);
+		// add(1233,234);
+
+		//typeof返回值:Number,Boolean,String,Function,undefined,Object
+		// var a = 'uzi',
+		// 		b = 123,
+		// 		c = {
+		// 			name : 'uzi'
+		// 		},
+		// 		d = [1,2,1,3],
+		// 		e = null ;
+		// console.log(typeof(a));
+		// console.log(typeof(b));
+		// console.log(typeof(c));
+		// console.log(typeof(d));
+		// console.log(typeof(e));
+
+		// var name = '222';
+		// var a = {
+		// 	name : '111',
+		// 	say : function(){
+		// 		console.log(this.name);
+		// 	}
+		// }
+		// var fun = a.say;
+		// fun();//222
+		// a.say();//111
+		// var b = {
+		// 	name : '333',
+		// 	say : function(fun){
+		// 		fun();
+		// 	}
+		// }
+		// b.say(a.say);//22
+		// b.say = a.say;
+		// b.say();//333
+
+			// var foo = 123;
+			// function f(){
+			// 	this.foo = 234;
+			// 	console.log(foo);
+			// }
+			// // f();//234
+			// new f();//123
+
+			// var a = 5;
+			// function test() {
+			// 	a = 0;
+			// 	console.log(a);
+			// 	console.log(this.a);
+			// 	var a;
+			// 	console.log(a);
+			// }
+			// //test();//0,5,0
+			// new test();//0,undefined,0
+
+			// var bar = {a : '002'};
+			// function print() {
+			// 	bar.a = 'a';
+			// 	Object.prototype.b = 'b';
+			// 	return function innner(){
+			// 		console.log(bar.a);
+			// 		console.log(bar.b);
+			// 	}
+			// }
+			// print()();
+
+			//浅层克隆，为引用值
+			// var obj = {
+			// 	name : 'dmxy',
+			// 	age : 2019,
+			// 	sex : 'male',
+			// 	arr : [1,2,3,4]
+			// }
+			// var obj1 = {};
+			// function clone(origin, target){
+			// 	var target = target || {};
+			// 	for(var key in origin){
+			// 		target[key] = origin[key];
+			// 	}
+			// 	return target;
+			// }
+			// clone(obj,obj1);
     </script>
 </body>
 </html>

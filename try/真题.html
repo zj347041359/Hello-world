@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var a = 1,y = z = 0;
+		// function add(n){
+		// 	foo.apply(null,arguments);
+		// 	return n = n + 3;
+
+		// }
+		// y = add(a);
+		// z = add(a);
+		// console.log(a + " " + y + ' ' + z);
+
+		// function foo(){
+		// 	console.log(arguments);s
+		// }
+		// foo(1,2,2,1,3);
+		// add(1233,234);
+
+		//typeof返回值:Number,Boolean,String,Function,undefined,Object
+		// var a = 'uzi',
+		// 		b = 123,
+		// 		c = {
+		// 			name : 'uzi'
+		// 		},
+		// 		d = [1,2,1,3],
+		// 		e = null ;
+		// console.log(typeof(a));
+		// console.log(typeof(b));
+		// console.log(typeof(c));
+		// console.log(typeof(d));
+		// console.log(typeof(e));
+
+		// var name = '222';
+		// var a = {
+		// 	name : '111',
+		// 	say : function(){
+		// 		console.log(this.name);
+		// 	}
+		// }
+		// var fun = a.say;
+		// fun();//222
+		// a.say();//111
+		// var b = {
+		// 	name : '333',
+		// 	say : function(fun){
+		// 		fun();
+		// 	}
+		// }
+		// b.say(a.say);//22
+		// b.say = a.say;
+		// b.say();//333
+
+			// var foo = 123;
+			// function f(){
+			// 	this.foo = 234;
+			// 	console.log(foo);
+			// }
+			// // f();//234
+			// new f();//123
+
+			// var a = 5;
+			// function test() {
+			// 	a = 0;
+			// 	console.log(a);
+			// 	console.log(this.a);
+			// 	var a;
+			// 	console.log(a);
+			// }
+			// //test();//0,5,0
+			// new test();//0,undefined,0
+
+			var bar = {a : '002'};
+			function print() {
+				bar.a = 'a';
+				Object.prototype.b = 'b';
+				return function innner(){
+					console.log(bar.a);
+					console.log(bar.b);
+				}
+			}
+			print()();
+    </script>
+</body>
+</html>

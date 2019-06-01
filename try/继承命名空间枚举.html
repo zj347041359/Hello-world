@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            //圣杯模式
+            // Father.prototype.lastName = 'wang';
+            // function Father() {
+            // }
+            // function Son() {
+            // }
+            // function inherit(Target, Origin) {
+            //     function F() {};
+            //     F.prototype = Origin.prototype;
+            //     Target.prototype = new F();
+            //     Target.prototype.constuctor = Target;
+            //     Target.prototype.uber = Origin.prototype;
+            //     // Target.prototype = Origin.prototype;
+            // }//加一个中间函数使得更改Son函数原型时不会影响Father函数原型
+            // inherit(Son,Father);
+            // var son = new Son();
+            // console.log(son.lastName);
+
+            // var obj = {
+            //     name : 'zj',
+            //     age : 24,
+            //     sex : 'male',
+            //     height : 175,
+            //     weight : 85
+            // }
+            // for( var prop in obj){
+            //     console.log(prop+":"+obj[prop]);
+            // }//枚举对象的属性
+
+            // var obj = {
+            //     name : 'zj',
+            //     age : 24,
+            //     sex : 'male',
+            //     height : 175,
+            //     weight : 8,
+            //     __proto__ : {
+            //         lastName : 'deng'
+            //     }
+            // }
+            // Object.prototype.abc = '123';
+            // for( var prop in obj){
+            //     if(!obj.hasOwnProperty(prop)){
+            //         console.log(prop+":"+obj[prop]);
+            //     }//hasOwnProperty()判断对象的属性是自己的还是原型的
+            // }//枚举对象的原型的属性
+
+            //   A instanceof B 
+            // 看A对象的原型链上有没有B的原型
+
+            //区分数组和对象
+            // var arr = [1,1,2,3];
+            // var obj = {
+            //     name : 'gl',
+            //     from : 'dmxy',
+            //     sex : 'male'
+            // }
+            //方法一：toString.call()
+            // console.log(Object.prototype.toString.call(arr));
+            // console.log(Object.prototype.toString.call(obj));
+            //方法二: instanceof Array
+            // console.log(obj instanceof Object);
+            // console.log(obj instanceof Array);//false
+            // console.log(arr instanceof Object);
+            // console.log(arr instanceof Array);
+            // 方法三:constructor
+            // console.log(arr.constructor);
+            // console.log(obj.constructor);
+        </script>
+    </body>
+</html>
