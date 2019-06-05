@@ -149,7 +149,7 @@
             }
         }
 
-            //数据去重
+            //数组去重
             function unrepeat(array){
                 for(var i = 0; i < array.length - 1; i++){
                     for(var j = 1; j < array.length; j++){
@@ -160,6 +160,28 @@
                 }
                 return array;
             }
+
+            //数组去重
+            Array.prototype.unique = function () {
+                var obj = {},
+                    arr = [],
+                    len = this.length
+                for(var i = 0; i < len; i++){
+                    if(!obj[this[i]]){
+                        obj[this[i]] = 'abc';
+                        arr.push(this[i]);
+                    }
+                }
+                return arr;
+            }
+    //this的指向：        
+    //1.预编译 this --> window
+    //2.谁调用的this指向谁
+    //3.call apply
+    //4.全局this --> window
+    
+    //B.apply(A,arguments)//只能有两个参数，新的this对象和参数数组
+	//B.call(A,arg1,arg2,arg3)//能有多个参数，新的this对象和一串参数列表
     </script>
 </body>
 </html>

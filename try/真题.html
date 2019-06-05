@@ -78,16 +78,56 @@
 			// //test();//0,5,0
 			// new test();//0,undefined,0
 
-			var bar = {a : '002'};
-			function print() {
-				bar.a = 'a';
-				Object.prototype.b = 'b';
-				return function innner(){
-					console.log(bar.a);
-					console.log(bar.b);
+			// var bar = {a : '002'};
+			// function print() {
+			// 	bar.a = 'a';
+			// 	Object.prototype.b = 'b';
+			// 	return function innner(){
+			// 		console.log(bar.a);
+			// 		console.log(bar.b);
+			// 	}
+			// }
+			// print()();//a,b
+
+			//一串字符[a-z]组成，找出第一次出现的只出现一次的字母
+			var str = 'lhlnljoioiajlkndoasihauihd';
+			function unre(str){
+				var newstr = {}
+				var arr = [];
+				var num = 1;
+				for(var i = 1; i < str.length; i++){
+					if(!newstr[str.substring(i - 1, i)]){
+						newstr[str.substring(i - 1, i)] = num;
+						arr.push(str.substring(i - 1, i));
+					}else{
+						newstr[str.substring(i - 1, i)] += num;
+					}
+				}
+				for(key in newstr){
+					if(newstr[key] == 1){
+						console.log(key);
+						break;
+					}
 				}
 			}
-			print()();
+			unre(str);
+			
+			//字符串去重
+			// var string = 'joahsouhdlkauhhlkznzuhfouaf';
+			// function unre(str){
+			// 	var newstr = {}
+			// 	var arr = [];
+			// 	for(var i = 0; i < str.length; i++){
+			// 		if(!newstr[str.substring(i - 1, i)]){
+			// 			newstr[str.substring(i - 1, i)] = 'abc';
+			// 			arr.push(str.substring(i - 1, i));
+
+			// 		}
+			// 	}
+			// 	console.log(arr.join(''));
+			// }
+			// unre(string);
+			
     </script>
 </body>
 </html>

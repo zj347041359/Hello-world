@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin : 0;
+            padding : 0;
+        }
+       ul{
+           width : 300px;
+           height: 300px;
+           border : 1px solid black;
+           list-style: none;
+       }
+       li{
+           box-sizing : border-box;
+           width : 30px;
+           height : 30px;
+           border : 1px solid black;
+           float : left;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+        <li img-data='0'></li>
+    </ul>
+
+    <script type="text/javascript">
+       var ul = document.getElementsByTagName('ul')[0];
+        ul.onmouseover = function (e){
+            var event = e ||window.e;
+            var target = event.target || event.srcElement;
+            target.style.backgroundColor = 'rgb(0,0,' + target.getAttribute('img-data') + ')';
+            target.setAttribute('img-data', parseInt(target.getAttribute('img-data')) + 10);
+            // console.log(target);
+        }
+    </script>
+</body>
+</html>

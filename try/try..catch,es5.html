@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //启动es5严格模式，es3和es5冲突的部分使用es5
+        //必须写在逻辑的最顶端
+        //可以全局也可以局部函数内
+        // 'use strict';
+        //es5不能用arguments.callee,arguments.caller
+        // function test(){
+        //     console.loh(arguments.callee);
+        // }
+        // test();
+        //es5不能用with
+        // var obj = {
+        //     dmxy :{
+        //         dmxyzl : 'gailun',
+        //         dmxyhz : 'gwss',
+        //         dbzg : 'zhaoxin'
+        //     },
+        //     nkss : {
+        //         nksszs : 'dles',
+        //         cstl : 'swy',
+        //         gsyj : 'lfl'
+        //     }
+        // };
+        // with(obj.nkss){
+        //     console.log(gsyj);
+        // }
+        //es5里不能有重复参数
+
+        //当try里有报错时会停止运行并执行catch里的代码
+        // try{
+        //     console.log('a');
+        //     console.log(b);
+        //     console.log('c');
+        // }catch(e){
+        //     console.log(e.name + ':' + e.message);
+        // }
+        // console.log('d');
+
+        //错误类型
+        //ReferenceError引用错误，一般是未经声明使用
+        //SyntaxError语法解析错误
+    </script>
+</body>
+</html>
