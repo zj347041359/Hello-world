@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+       
+    </style>
+</head>
+<body>
+   <div>
+       <span>
+           <i></i>
+           <h1></h1>
+       </span>
+       <b></b>
+       <div></div>
+   </div>
+
+    <script type="text/javascript">
+        var h1 = document.getElementsByTagName('h1')[0];
+        var div = document.getElementsByTagName('div')[0];
+        var b = document.getElementsByTagName('b')[0];
+        var div1 = document.getElementsByTagName('div')[1];
+        var i = document.getElementsByTagName('i')[0];
+        //返回元素的第n层的祖先元素节点
+    //    function retParent(elem, n) {
+    //        while(elem && n){
+    //            elem = elem.parentElement;
+    //            n--;
+    //        }
+    //        return elem;
+    //    }
+
+        //返回元素的子元素节点
+        // Element.prototype.myChildren = function(){
+        //     var child = this.childNodes;
+        //     var len = child.length;
+        //     var arr = [];
+        //     for(var i = 0; i < len; i++){
+        //         if(child[i].nodeType == 1){
+        //             arr.push(child[i]);
+        //         }
+        //     }
+        //     return arr;
+        // }
+        
+        //判断元素是否存在子元素
+        // Element.prototype.hasChildren = function(){
+        //     var child = this.childNodes;
+        //     var len = child.length;
+        //     var arr = [];
+        //     for(var i = 0; i < len; i++){
+        //         if(child[i].nodeType == 1){
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }    
+
+        //返回e元素的兄弟元素，n为正时为e后面的第n位，n为负时为e前面第n位
+        // function retSibling(e, n) {
+        //     while(e && n) {
+        //         if(n > 0){
+        //             e = e.nextElementSibling;
+        //             n --;
+        //         }else{
+        //             e = e.previousElementSibling;
+        //             n ++;
+        //         }
+        //     }
+        //     return e;
+        // }
+
+        //兼容IE实现此功能
+        // function retSi(e, n) {
+        //     while(e && n){
+        //         if(n > 0){
+        //             if(e.nextElementSibling){
+        //                 e = e.nextElementSibling;
+        //             }else{
+        //                 for(e = e.nextSibling; e && e.nodeType != 1; e = e.nextSibling){};
+        //             }
+        //             n--;
+        //         }else{
+        //             if(e.previousElementSibling){
+        //                 e = e.previousElementSibling;
+        //             }else{
+        //                 for(e = e.previousSibling; e && e.nodeType != 1; e = e.previousSibling){};
+        //             }
+        //             n++;
+        //         }
+        //     }
+        //     return e;
+        // }
+
+        var span = document.createElement('span');//创建元素节点
+        var text = document.createTextNode('德玛西亚');//创建文本节点
+        var comment = document.createComment('this is comment');//创建注释节点
+
+        div.appendChild(text);//插入，剪切操作
+        div.insertBefore(span, b);//在子元素b前插入span
+
+        div.removeChild(b);//删除并返回子元素
+        h1.remove();//删除
+        div.replaceChild(span,div1);//替换
+
+        div.innerHTML += '诺克萨斯';
+        i.innerText = '瓦斯塔亚';//火狐不兼容
+        // i.textContent = '艾欧尼亚';//老版本IE不兼容
+    </script>
+</body>
+</html>
