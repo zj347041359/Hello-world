@@ -25,6 +25,7 @@
         var b = document.getElementsByTagName('b')[0];
         var div1 = document.getElementsByTagName('div')[1];
         var i = document.getElementsByTagName('i')[0];
+        var span = document.getElementsByTagName('span')[0];
         //返回元素的第n层的祖先元素节点
     //    function retParent(elem, n) {
     //        while(elem && n){
@@ -96,20 +97,40 @@
         //     return e;
         // }
 
-        var span = document.createElement('span');//创建元素节点
+        var span1 = document.createElement('span');//创建元素节点
         var text = document.createTextNode('德玛西亚');//创建文本节点
         var comment = document.createComment('this is comment');//创建注释节点
 
-        div.appendChild(text);//插入，剪切操作
-        div.insertBefore(span, b);//在子元素b前插入span
+        // div.appendChild(text);//插入，剪切操作
+        // div.insertBefore(span1, b);//在子元素b前插入span
 
-        div.removeChild(b);//删除并返回子元素
-        h1.remove();//删除
-        div.replaceChild(span,div1);//替换
+        // div.removeChild(b);//删除并返回子元素
+        // h1.remove();//删除
+        // div.replaceChild(span1,div1);//替换
 
-        div.innerHTML += '诺克萨斯';
-        i.innerText = '瓦斯塔亚';//火狐不兼容
-        // i.textContent = '艾欧尼亚';//老版本IE不兼容
+        // div.innerHTML += '诺克萨斯';
+        // span.innerText = '瓦斯塔亚';//火狐不兼容s
+        // // span.textContent = '艾欧尼亚';//老版本IE不兼容
+        // div.setAttribute('class', 'con');//给元素添加属性
+        // div.getAttribute('class');//返回元素的属性值
+
+        //在子元素后插入新元素
+        // Element.prototype.insertAfter = function(targetNode, afterNode){
+        //     var beforeNode = afterNode.nextElementSibling;
+        //     if(beforeNode == null){
+        //         this.appendChild(targetNode);
+        //     }else{
+        //         this.insertBefore(targetNode,beforeNode);
+        //     }
+        // }
+
+        function dao(node) {
+            var son = node.children;
+            var len = son.length;
+            for(var i = len; i > -1; i--){
+                node.appendChild(node.children[i-1].remove());
+            }
+        }
     </script>
 </body>
 </html>

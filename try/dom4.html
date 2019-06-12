@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+       
+    </style>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+    Element.prototype.insertAfter = function(targetNode, afterNode){
+        var beforeNode = afterNode.nextElementSibling;
+        if(beforeNode == null){
+            this.appendChild(targetNode);
+        }else{
+            this.insertBefore(targetNode,beforeNode);
+        }
+    }
+    
+    function dao() {
+        var son = this.children;
+        var len = son.length;
+        var arr = [];
+        for(var i = len; i > -1; i--){
+            son[i] = arr[len - i];
+        }
+    }
+    
+
+    </script>
+</body>
+</html>
