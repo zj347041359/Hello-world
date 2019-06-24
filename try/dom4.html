@@ -13,21 +13,12 @@
 
 
     <script type="text/javascript">
-    Element.prototype.insertAfter = function(targetNode, afterNode){
-        var beforeNode = afterNode.nextElementSibling;
-        if(beforeNode == null){
-            this.appendChild(targetNode);
-        }else{
-            this.insertBefore(targetNode,beforeNode);
-        }
-    }
     
-    function dao() {
-        var son = this.children;
+    function dao(node) {
+        var son = node.children;
         var len = son.length;
-        var arr = [];
         for(var i = len; i > -1; i--){
-            son[i] = arr[len - i];
+            node.appendChild(son[n-1].remove());
         }
     }
     

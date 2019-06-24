@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+     <div style = 'width:200px;height:200px; background-color:red;position:absolute;top:0;left:0;'></div>
+    <script type="text/javascript">
+        var div = document.getElementsByTagName('div')[0];
+        var divX,divY;
+        div.onmousedown = function(e){
+            divX = e.pageX - parseInt(div.style.left);
+            divY = e.pageY - parseInt(div.style.top);
+            document.onmousemove = function(e){
+                var event = e || window.event;
+                div.style.left = e.pageX - divX + 'px';
+                div.style.top = e.pageY - divY + 'px';
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null;
+            }
+        }
+        
+    </script>
+</body>
+</html>

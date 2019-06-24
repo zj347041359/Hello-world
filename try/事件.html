@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+     <div></div>
+     <!-- <ul>
+         <li>a</li>
+         <li>a</li>
+         <li>a</li>
+         <li>a</li>
+     </ul>        -->
+
+     <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+         <li>6</li>
+         <li>7</li>
+         <li>8</li>
+         <li>9</li>
+         <li>10</li>
+     </ul>
+    <script type="text/javascript">
+       var div = document.getElementsByTagName('div')[0];
+       //句柄写法
+
+        // div.onclick = function() {
+        //     console.log(a);
+        // }
+
+        //IE9以下不兼容
+        // div.addEventListener('click', function(){
+        //     console.log('a');
+        // }, false);
+
+        //IE独有
+        //div.attachEvent('onclick', function(){});
+        
+            // var li = document.getElementsByTagName('li');
+            // var len = li.length;
+            // for(var i = 0; i < li.length; i++){
+            //     (function(i){
+            //         li[i].addEventListener('click',function(){
+            //         console.log(i);
+            //     }, false)
+            //     }(i))
+            
+            // }
+        
+        //兼容性方法
+        // function addEvent(elem, type, handle){
+        //     if(elem.addEventListener){
+        //         elem.addEventListener(type, handle, false);
+        //     }else if(elem.attachEvent){
+        //         elem.attachEvent('on' + type, function(){
+        //             handle.call(elem);
+        //         })
+        //     }else{
+        //         elem['on' + type] = handle;
+        //     }
+        // }
+
+        //解除绑定事件
+        // ele.onclick = false/''/null;
+        // ele.removeEventListener(type, fn,false);
+        // ele.detachEvent('on' + type, fn);
+
+        //取消冒泡
+        //event.stopPropagation();//w3c标准，IE9以下不支持
+        //event.cancelBubble = true;//IE独有
+
+        //兼容性方法
+        // function stopBubble(event){
+        //     if(event.stopPropagation){
+        //         event.stopPropagation();
+        //     }else{
+        //         event.cancelBubble = true;
+        //     }
+        // }
+
+        //阻止默认事件
+        // return false;//以对象属性的方式注册的事件菜生效
+        // event.preventDefault();//w3c标准，IE9以下不兼容
+        // event.returnValue = false; //兼容IE
+
+        //兼容性方法
+        // function cancelHandler(event){
+        //     if(event.preventDefault){
+        //         event.preventDefault();
+        //     }else{
+        //         event.returnValue = false;
+        //     }
+        // }
+
+        //事件对象
+        //event || window.event
+        //事件源对象
+        //event.target//火狐独有
+        //event.srcElement//IE独有
+        //chrome都有
+        // function getTarget(e) {
+        //     var event = e || window.event;
+        //     var target = event.target || event.srcElement;
+        //     return target;
+        // }
+        
+        //IE独有是事件捕获，所有事件都算是div发生的
+        //div.setCapture();
+        //div.releaseCapture();释放事件
+
+        var ul = document.getElementsByTagName('ul')[0];
+        ul.onclick = function(e){
+            var event = e || window.event;
+            var target = event.target || event.srcElement;
+            console.log(target.innerText);
+        }
+    </script>
+</body>
+</html>

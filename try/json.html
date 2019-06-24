@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    
+    <script type="text/javascript">
+    //JSON
+       var obj = {
+           name : 'GL',
+           age : 24
+       }
+       var str = JSON.stringify(obj);//对象转换成json
+       var obj1 =JSON.parse(str);//json转换成对象
+
+       //异步加载方法一二
+       //defer = 'defer'//IE9以下独有
+       //async = 'async'//只能加载外部脚本
+       
+       //异步加载js方法三
+       var script = document.createElement('script');
+       script.type = 'text/javascript';
+       script.src = 'demo.js';
+       
+    //    script.onload = function(){//非IE
+    //        test();
+    //    }
+
+        //IE
+        // script.onreadystatechange = function(){
+        //     if(script.readyState == 'complete' || script.readyState == 'loaded'){
+        //         test()
+        //     }
+        // }
+        
+        //兼容性写法
+        if(script.readyState){
+            script.onreadystatechange = function(){
+                if(script.readyState == 'complete' || script.readyState == 'loaded'){
+                    test()
+                }
+            }
+        }else{
+            script.onload = function(){//非IE
+                test();
+            }
+        }
+        document.head.appendChild(script);
+       //加载速度比下载速度快
+    //    setTimeout(function(){
+    //        test();
+    //    },1000);
+
+
+    </script>
+</body>
+</html>

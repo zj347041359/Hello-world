@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // var reg = /abc/g;
+        // var reg1 = new RegExp('ab', 'g')
+        // var str = 'aclkndlhabcsajpiadoiabcjsadjajdabc';
+        // reg.test(str);//true
+        // str.match(reg);//'aba','abc','abc'
+        // reg1.test(str);
+        // str.match(reg1);
+        // var reg2 = /[abc][abc]/g;//'ac','ab','ab','ab'
+        // var reg3 = /^a[abc]/g;//ac
+        // var reg4 = /[^a][abc]/g;//"ha", "bc", "sa", "ia", "ia", "bc", "sa", "ja", "da", "bc"
+        // var reg5 = /(ad|ac)/g;//'ac','ad','ad'
+
+        //返回第一个匹配的位置
+        // var str = 'ajkhuukjaad';
+        // var reg = /(\w)\1/g;
+        // console.log(str.search(reg));
+        // console.log(str.search(reg));
+        // console.log(str.search(reg));
+
+        //替换与正则表达式匹配的子串
+        // var str = 'aabbcc';
+        // var reg = /(\w)\1(\w)\2(\w)\3/g;
+        // console.log(str.replace(reg, '$2$2$1$1'));//bbaa
+        // console.log(str.replace(reg, function($,$1,$2,$3){
+        //     return $3+$3+$2+$2+$1+$1;
+        // }));
+
+        var str = 'the-first-name';
+        var reg = /-(\w)/g;
+        console.log(str.replace(reg, function($, $1){
+            return $1.toUpperCase();
+        }));
+
+        //检索指定的值，返回找到的值并确定位置，以lastIndex为光标进行移动
+        // var str = 'llkaddonooaiha';
+        // var reg = /(\w)\1/g;
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+
+        //选取指定的字切割字符串
+        // var str = 'lkniiihdaaallhooikkkknahd';
+        // var reg = /(\w)\1\1/g;
+        // console.log(str.split(reg));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            margin: 10px;
+        }
+       input{
+           border: 2px solid black;
+           text-align: right;
+           height: 20px;
+           font-weight: bold;
+           display: block;
+           
+       }
+    </style>
+</head>
+<body>
+    <div>
+        minutes<input type="text" value="0">
+        seconds<input type="text" value="0">
+    </div>
+
+    <script type="text/javascript">
+
+    // var date = new Date();
+    //Date对象方法
+    // getDate()
+    // getDay()
+    // getMonth()
+    // getFullYear()
+    // getHours()
+    // getMinutes()
+    // getSeconds()
+    // getTime()
+
+    //定时循环
+    // var i = 0;
+    // setInterval(function(){
+    //     i++;
+    //     console.log(i);
+    // }, 1000)
+
+    //定时器计时并不准确
+    // var first = new Date().getTime();
+    // setInterval(function(){
+    //     var last = new Date().getTime();
+    //     console.log(last - first)
+    //     first = last;
+    // }, 1000)
+
+    //延迟执行
+    // var i = 0;
+    // var timer = setInterval(function(){
+    //     console.log(i++);
+    //     if(i>10){
+    //         clearInterval(timer);//清除定时器
+    //     }
+    // },1000);
+
+    // var timer1 = setTimeout(function(){
+    //     console.log('a');
+    // }, 1000);
+    // clearTimeout(timer1);//清除定时器
+
+    var minutes = document.getElementsByTagName("input")[0];
+    var seconds = document.getElementsByTagName('input')[1];
+    var min = 0, sec = 0;
+    var timer = setInterval(function(){
+        sec ++;
+        if(sec == 60){
+            sec = 0;
+            min ++;
+        }
+        minutes.value = min;
+        seconds.value = sec;
+        if(min == 3){
+            clearInterval(timer);
+        }
+    },100);    
+    </script>
+</body>
+</html>
