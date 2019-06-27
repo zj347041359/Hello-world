@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <canvas id="canvasDiv" width = '800px' height = '800px' style="border: 2px solid black">
+            您的浏览器不支持canvas
+        </canvas>
+        <img src="Z46.jpg" alt="">
+        <button onclick='loadImage()'>加载图片</button>
+
+        <script>
+            var canvas = document.getElementById('canvasDiv');
+            var context = canvas.getContext('2d');
+            var img = document.getElementsByTagName('img')[0];
+
+
+            //线条
+            context.moveTo(0, 0);//起点
+            context.lineTo(250,200);//终点
+            context.strokeStyle = 'red';//颜色
+            context.lineWidth = 5;//宽度
+            context.stroke();//开始绘制
+
+            //矩形
+            context.fillStyle = 'blue';
+            context.fillRect(300,300,300,300);//左边距，上边距，宽，高
+
+            //圆
+            context.beginPath();
+            context.arc(300, 100, 60, 0, 2 * Math.PI);
+            context.closePath();
+            context.fillStyle = 'green';
+            context.fill();
+            context.stroke();
+
+            //文字
+            context.font = '30px sans-serif';
+            context.fillText('德玛西亚',400,30);
+            context.font = '50px Arial';
+            context.strokeText('诺克萨斯',400,100);
+
+            //插入图片,不能直接绘制，需绑定函数
+            function loadImage(){
+                context.drawImage(img, 100, 100);
+            }
+            
+        </script>
+    </body>
+</html>

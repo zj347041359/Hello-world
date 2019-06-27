@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>webStorage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            // localStorage.setItem('1', '德玛西亚');
+            // var name = localStorage.getItem('name');
+            // console.log(name);
+            // localStorage.clear();
+
+            //记录用户访问次数
+            if(localStorage.pagecount){
+                localStorage.pagecount=Number(localStorage.pagecount) +1;
+            }else{
+                localStorage.pagecount=1;
+            }
+            console.log('Visits ' + localStorage.pagecount + ' time(s).');
+
+        </script>
+    </body>
+</html>

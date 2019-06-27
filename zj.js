@@ -99,3 +99,11 @@ function loadScript(url, callback) {
     script.src = 'url';
     document.head.appendChild(script);
 }
+
+ //记录用户访问次数
+if(localStorage.pagecount){
+    localStorage.pagecount = Number(localStorage.pagecount) + 1;
+}else{
+    localStorage.pagecount = 1;
+}
+console.log('Visite ' + localStorage.pagecount + ' time(s).');
