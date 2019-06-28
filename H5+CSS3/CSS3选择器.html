@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            a[href]{
+                color : red;
+            }
+            a[href='nkss']{
+                color : green;
+            }
+            
+             a[class~='nkss']{/*与属性名相同或属性以空格分割 */
+                color : #666;
+                font-size: 30px;
+            }
+            a[class |='dmxy']{/*与属性名相同或属性以-分割 */
+                color: aqua;
+                font-size: 40px;
+            }
+            div[class ^='abc']{
+                color: blue;
+                font-size: 40px;
+            }
+            div[class $='abc']{
+                color: yellow;
+                font-size: 40px;
+            }
+            div[class *='cf']{
+                color: rgb(255, 136, 0);
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <a></a>
+        <a href="">德玛西亚</a>
+        <a class="nkss">诺克萨斯</a>
+        <a class="dmxy">艾欧尼亚</a>
+        <br>
+        <a class="dmxy">CSS3选择器，属性以空格分割</a><br>
+        <a class="dmxy-nkss">CSS3选择器，属性以-分割</a>
+        <div class="abc bcd cdf">属性以abc开头</div>
+        <div class="cdf bcd abc">属性以abc结尾</div>
+        <div class="bcd abc cf cdf">属性包含abc</div>
+        <div class="bcd-abc-cf-cdf">属性包含abc</div>
+        <script></script>
+    </body>
+</html>
