@@ -40,24 +40,24 @@
     		<span></span>
     	</span>
     <script type="text/javascript">
-    	// console.log($("ul").parent());
+    	//console.log($("ul").parent());
     	// 父元素
     	// console.log($("ul").parents());
-    	// 所以先代元素
+    	// 所有先代元素
     	// console.log($("ul").parentsUntil("html"));
     	// 到html元素前ul的父元素
     	// console.log($("ul").children());
     	// 所有子元素
-    	// console.log($("ul").find("*"));
+    	// console.log($("ul").find("*"));//对后代元素进行筛选
     	// 所有后代元素
-    	// console.log($("ul").siblings());
-    	// 所有兄弟元素
-    	// console.log($("ul").next());
-    	// 下一个兄弟元素
-    	// console.log($("ul").nextAll());
-    	// 后面的兄弟元素
-    	// console.log($("ul").nextUntil("span"));
-    	// 到span之前的兄弟元素
+    	// console.log($("div:first").siblings());
+    	// 第一个div的所有兄弟元素
+    	// console.log($("div:first").next());
+    	// 第一个div下一个兄弟元素
+    	// console.log($("div:first").nextAll());
+    	// 第一个div后面的兄弟元素
+    	// console.log($("div:first").nextUntil("span"));
+    	// 第一个div到span之前的兄弟元素
     	// prev(),prevAll(),prevUntil() 与上三者方向相反
     	// console.log($("div h2").first().text());
      //    第一个div元素的第一个h2后代元素
@@ -66,8 +66,8 @@
         // console.log($("li").eq(2).html());
         // li元素中的第3个元素
         ($("li").filter(".one").css("background-color","red"));
-        li元素中类名为one的元素
-        // ($("li").not(".one").css("background-color","red"));
+        //li元素中类名为one的元素
+         ($("li").not(".one").css("background-color","pink"));
         // li元素中类名不是one的元素
     </script>
 </body>

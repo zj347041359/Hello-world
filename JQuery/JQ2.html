@@ -35,30 +35,30 @@
 
     <script>
     	$("#but1").click(function(){
-    		alert("Text:" + $("#div1").text())
+    		alert("Text:" + $("#div1").text())//获得元素的内容
     	});
     	$("#but2").click(function(){
-    		alert("HTML:" + $("#div2").html())
+    		alert("HTML:" + $("#div2").html())//获得元素
     	});
     	$("#but3").click(function(){
-    		alert("值为:" + $("#div3").val())
+    		alert("值为:" + $("#div3").val())//获得元素的val值
     	});
     	$("#but4").click(function(){
-    		alert("action属性:" + $("#link1").attr("action"))
+    		alert("action属性:" + $("#link1").attr("action"))//获得元素的action属性值
     	});
     	$("#but11").click(function(){
-    		$("#div1").text(function(i,origText){
-    			return "旧文本：" + origText + "新文本：啦啦啦德玛西亚";
-    		})
+    		$("#div1").text(function(i,text){//更改元素内容
+    			return "旧文本：" + text + "\n新文本：啦啦啦德玛西亚";
+			})
     	});
     	$("#but22").click(function(){
-    		$("#div2").html("<h1>诺克萨斯，永垂不朽！</h1>")
+    		$("#div2").html("<h1>诺克萨斯</h1>")//更改元素
     	});
     	$("#but33").click(function(){
-    		$("#div3").val("刀锋意志")
+    		$("#div3").val("刀锋意志")//更改元素的val属性值
     	});
     	$("#but44").click(function(){
-    		$("#link1").attr({
+    		$("#link1").attr({//更改元素的属性值
     			"href":"http://www.baidu.com",
     			"action":"change"
     		})

@@ -34,23 +34,24 @@
     <script>
     	
     	$("#but1").click(function(){
-    		$("div").toggle();
+    		$("div").toggle();//更改元素的隐藏属性，让出现的元素隐藏，隐藏的元素出现
     	});
     	$("#but2").click(function(){
-    		$("#div1").fadeIn();
+    		$("#div1").fadeIn();//淡入效果
     		$("#div2").fadeIn("slow");
     		$("#div3").fadeIn(3000);
     	});
     	$("#but3").click(function(){
-    		$("#div1").fadeOut();
+    		$("#div1").fadeOut();//淡出效果
     		$("#div2").fadeOut("slow");
-    		$("#div3").fadeOut(3000);
+			$("#div3").fadeOut(3000);
+			
     	});
     	$("#but4").click(function(){
-    		$("div").animate({width:'100px',height:'toggle'});
+    		$("div").animate({width:'100px',height:'toggle'});//动画
     		$("div").animate({width:'200px',height:'show'});
     		$("div").animate({width:'300px',height:'show'});
-
+			$('div').animate({padding:'200px'},1000);
     	});
     </script>
 </body>

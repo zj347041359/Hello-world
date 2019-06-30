@@ -13,13 +13,11 @@
     
     <button type="button" id="but1">发送HTTP GET 请求并获取返回结果</button>
     <script type="text/javascript">
-    	$(document).ready(function(){
     		$("#but1").click(function(){
-    			$.get("demo_test.php",function(echo,status){
-                    alert("数据：" + echo + "\n状态：" +status)
+    			$.get("demo_test.php",function(data,status){
+                    alert("数据：" + data + "\n状态：" +status)
                 });
     		});
-    	})
     	
     </script>
 </body>

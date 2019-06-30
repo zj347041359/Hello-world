@@ -14,7 +14,6 @@
 	#div2{
 		width: 200px;
 		height: 200px;
-		/*background-color: blue;*/
 	}
 	.none{
 		display: none;
@@ -37,52 +36,30 @@
 
     <script>
     	$("#but1").click(function(){
-    		$("#div1").prepend("啦啦啦");
+    		$("#div1").prepend("啦啦啦");//在p的开头插入内容
     	});
     	$("#but2").click(function(){
-    		$("#div1").after("<a>德玛西亚</a>");
+    		$("#div1").after("<a>德玛西亚</a>");//在元素后插入
     	});
     	$("#but3").click(function(){
-    		$("#div2").remove();
+    		$("#div2").remove();//删除并返回元素
     	});
     	$("#but4").click(function(){
-    		$("#div2").empty();
+    		$("#div2").empty();//移除所有内容，文本及子节点
     	});
     	$("#but11").click(function(){
-    		$("#div1").toggleClass("none");
+    		$("#div1").toggleClass("none");//增添或删除元素的类名
+		});
+		$("#but22").click(function(){
+    		$("#div2").css("background-color","blue");//更改css属性
     	});
     	$("#but33").click(function(){
-    		alert("width:" + $("#div1").css("width"));
+    		alert("width:" + $("#div1").css("width"));//返回css属性
     	});
     	$("#but44").click(function(){
     		$("#div1").css("background-color","blue");
     	});
-    	// $("#but2").click(function(){
-    	// 	alert("HTML:" + $("#div2").html())
-    	// });
-    	// $("#but3").click(function(){
-    	// 	alert("值为:" + $("#div3").val())
-    	// });
-    	// $("#but4").click(function(){
-    	// 	alert("action属性:" + $("#link1").attr("action"))
-    	// });
-    	// $("#but11").click(function(){
-    	// 	$("#div1").text(function(i,origText){
-    	// 		return "旧文本：" + origText + "新文本：啦啦啦德玛西亚";
-    	// 	})
-    	// });
-    	// $("#but22").click(function(){
-    	// 	$("#div2").html("<h1>诺克萨斯，永垂不朽！</h1>")
-    	// });
-    	// $("#but33").click(function(){
-    	// 	$("#div3").val("刀锋意志")
-    	// });
-    	// $("#but44").click(function(){
-    	// 	$("#link1").attr({
-    	// 		"href":"http://www.baidu.com",
-    	// 		"action":"change"
-    	// 	})
-    	// });
+    	
     </script>
 </body>
 </html>
