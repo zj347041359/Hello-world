@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Ajax</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="jquery-3.3.1.min.js"></script>
+<link href="" rel="stylesheet">
+</head>
+<body>
+    
+    <button type="button" id="but1">发送HTTP post请求</button>
+    <script type="text/javascript">
+    		$("#but1").click(function(){
+    			$.get("demo_test.php",function(data,status){
+                    alert("数据：" + data + "\n状态：" +status)
+                });
+    		});
+    	
+    </script>
+</body>
+</html>
