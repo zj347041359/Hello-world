@@ -33,7 +33,7 @@
 		<button v-on:click="reverseMessage">逆转消息</button>
 	</div> -->
 	<div id="app-6">
-		<p>{{ message }}</p>
+		<p >{{ message }}</p>
 		<input v-model="message">
 	</div>
 
@@ -80,7 +80,7 @@
     	var app6 = new Vue({
     		el: '#app-6',
     		data:{
-    			message: 'Hello Vue!'
+				message: 'Hello Vue!',
     		}
     	})
     	// 阻止修改现有属性

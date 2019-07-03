@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue表单</title>
+<script src="vue.min.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+    .abc{
+        width : 200px;
+        height : 200px;
+        background-color : pink;
+    }
+    .active{
+        background-color: black;
+    }
+    .text-danger{
+        background-color : green;
+    }
+</style>
+</head>
+<body>
+	<div id="components-demo" class="abc" :class = "{active: isActive, 'text-danger': hasError}">
+		<button-counter></button-counter>
+	</div>
+
+    <script type="text/javascript">
+    var obj1 = document.getElementById('components-demo');
+	var obj = new Vue({
+        el : '#components-demo',
+        data : {
+            isActive: false,
+            hasError: true
+        }
+    })
+	</script>
+</body>
+</html>
