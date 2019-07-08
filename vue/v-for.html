@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>vue</title>
+<script src="vue.js"></script>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <th>id</th>
+                <th>名称</th>
+                <th>价格</th>
+            </thead>
+            <tbody>
+                <tr v-for='book in books' :key='book.id'>
+                    <td>{{book.id}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    
+    <script  type="text/javascript" charset="utf-8" async defer>
+    	var vm = new Vue({
+            el:'#app',
+            data:{
+                books:[{
+                    id:0,
+                    name:"JavaScript从入门到放弃",
+                    price:75
+                },{
+                    id:1,
+                    name:"Java从入门到入土",
+                    price:80
+                },{
+                    id:2,
+                    name:"Mysql从删库到跑路",
+                    price:66
+                },{
+                    id:3,
+                    name:"php天下第一",
+                    price:66
+                }]
+            }
+        })
+
+        // vm.books.sort(function(b1,b2){
+        //     return b1.price - b2.price;
+        // })
+
+        vm.books= vm.books.filter(function(book){
+            return book.name.indexOf('Java') > -1;
+        })
+
+    </script>
+</body>
+</html>

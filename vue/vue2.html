@@ -20,18 +20,18 @@
 	    <p><span v-html="rawHtml"></span></p>
 		<input v-model="rawHtml">
 	</div> -->
-	<!-- <ol>
+	<ol>
 		<todo-utem></todo-utem>
-	</ol> -->
-	<!-- <template v-if="loginType === 'username'">
+	</ol>
+	<template v-if="loginType === 'username'">
 	  <label>Username</label>
 	  <input placeholder="Enter your username">
 	</template>
 	<template v-else>
 	  <label>Email</label>
 	  <input placeholder="Enter your email address">
-	</template> -->
-	<!-- <div v-if="type === 'A'">
+	</template>
+	<div v-if="type === 'A'">
 	  A
 	</div>
 	<div v-else-if="type === 'B'">
@@ -42,16 +42,16 @@
 	</div>
 	<div v-else>
 	  Not A/B/C
-	</div> -->
+	</div>
 	<h1> this is a todo list</h1>
-	<div id="app-1">
+	<!-- <div id="app-2">
 	<ul>
 		<li v-for="(item,index) in items" v-bind:class="{finished: item.isFinished}" v-on:click="doThis(item)">
 			{{index+1}}、{{item.label}}
 		</li>
 	</ul>
 		<input v-model="add" placeholder="edit me" @keyup.enter="onEnter">
-	</div>
+	</div> -->
 
     <script type="text/javascript">
     	// var app1 = new Vue({
@@ -67,27 +67,27 @@
     	// 	el: 'body',
     	// 	components: { 'todo-item' }
     	// })
-    	var list1 = new Vue({
-    		el: '#app-1',
-    		data:{
-    			items:[
-    			],
-    			add:''
-    		},
-    		methods:{
-    			doThis: function(item){
-    				item.isFinished=!item.isFinished;
-    			},
-    			onEnter:function(){
-    				this.items.push({
-    					label: this.add,
-    					isFinished: false
-    				})
-    				this.add='';
+    	// var list1 = new Vue({
+    	// 	el: '#app-2',
+    	// 	data:{
+    	// 		items:[
+    	// 		],
+    	// 		add:''
+    	// 	},
+    	// 	methods:{
+    	// 		doThis: function(item){
+    	// 			item.isFinished=!item.isFinished;
+    	// 		},
+    	// 		onEnter:function(){
+    	// 			this.items.push({
+    	// 				label: this.add,
+    	// 				isFinished: false
+    	// 			})
+    	// 			this.add='';
 
-    			}
-    		}
-    	})
+    	// 		}
+    	// 	}
+    	// })
 
     </script>
 </body>
