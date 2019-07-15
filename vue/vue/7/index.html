@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>键盘 Events</h1>
+            <label>姓名：{{name}}</label>
+            <input type="text" v-on:keyup.space='logName'>
+            <label>年龄：{{age}}</label>
+            <input type="text" v-on:keyup.alt.enter='logAge'>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>键盘 Events</h1>
+            <label>姓名：{{name}}</label><br>
+            <input ref='name' type="text" v-model='name'><br>
+            <label>年龄：{{age}}</label><br>
+            <!-- <input ref='age' type="text" v-on:keyup='logAge'> -->
+            <input ref='age' type="text" v-model='age'>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

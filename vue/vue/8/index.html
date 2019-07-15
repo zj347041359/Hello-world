@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1 v-on:click='red=!red' v-bind:class='{red}'>示例一</h1>
+            <h1 v-bind:class='comClass'>示例二</h1>
+            <button v-on:click='green =!green'>green</button>
+            <button v-on:click='red =!red'>red</button>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>

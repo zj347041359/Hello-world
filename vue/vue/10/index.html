@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>v-if</h1>
+            <button v-on:click='error=!error'>error</button>
+            <button v-on:click='success=!success'>success</button>
+            <!-- <p v-if='error'>网络连接错误:404</p>
+            <p v-else-if='success'>网络连接成功：200</p> -->
+            <p v-show='error'>网络连接错误:404</p>
+            <p v-show='success'>网络连接成功：200</p>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>
