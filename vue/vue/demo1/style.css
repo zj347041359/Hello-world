@@ -1,6 +1,26 @@
-.red{
-    color:red;
+#bag{
+    width:400px;
+    height: 400px;
+    margin: 20px auto;
+    background-image: url('../../../BL/Z46.jpg');
+    background-repeat:no-repeat;
+    background-size: 100%;
 }
-.green{
-    color:green;
+#bag-health{
+    width:400px;
+    margin:0 auto 20px auto;
+    border:2px solid black;
+}
+#bag-health div{
+    height: 20px;
+    background-color:blue;
+}
+#btn{
+    width:400px;
+    margin: 10px auto;
+    padding-left: 10px;
+    text-align: center;
+}
+#bag.burst{
+    background-image: url('../../../BL/光辉.jpg');
 }

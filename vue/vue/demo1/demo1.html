@@ -8,15 +8,13 @@
     </head>
     <body>
         <div id="vue-app">
-           <div id='bag'>
-               <img src="../../../BL/Z46.jpg" alt="">
-           </div>
+           <div id='bag' v-bind:class='{burst:ended}'></div>
            <div id="bag-health">
-               <div></div>
+               <div v-bind:style="{width: health + '%'}"></div>
            </div>
            <div id="btn">
-               <button v-on:click='add'>用力敲</button>
-               <button c-on:click="again">重新开始</button>
+               <button v-on:click='add' v-show='!ended'>用力敲</button>
+               <button v-on:click="again">重新开始</button>{{health}}
            </div>
 
         </div>
