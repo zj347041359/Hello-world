@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>首页</title>
-<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="Stylesheet" type="text/css" href="css/home.css" />
 </head>
 <body>
@@ -204,35 +204,51 @@
 			</ul>
 		</div>
 	</div>
-	<footer>
-		<div class="foo">
-			<div class="jns">
-				<p>技能树——改变你我</p>
-				<div><br>
-					<a href="">关于我们</a>
-					<div>|</div>
-					<a href="">联系我们</a>
-					<div>|</div>
-					<a href="">合作企业</a>
-				</div>
-			</div>
-			<div>
-				<p class="web">旗下网站</p>
-				<a href="">草船云孵化器</a>
-				<a href="">最强IT特训营</a><br>
-				<a href="">葡萄藤轻游戏</a>
-				<a href="">桌游精灵</a>
-			</div>
-			<div class="gzh">
-				<p>微信公众平台</p>
-				<img src="img/gzh.png" alt="微信公众平台">
-			</div>
-		</dic>
-	</div>
-		<div class="beianhao">Copyright @ 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</div>
-	</footer>
+	<div class="footer  ng-scope" ng-if=" $state.current.name !='skill.preview' &amp;&amp; $state.current.name !='skill.school.skill' &amp;&amp; $state.current.name !='skill.webResource'">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-xs-12">
+                <p class="lead">技能树&nbsp;&nbsp;|&nbsp;&nbsp;IT修真院</p>
+                <p style="visibility: hidden">技能树</p>
+                <p>
+                    <a ui-sref="skill.material.us" href="/material/us">关于我们</a> ｜
+                    <a ui-sref="skill.material.contact" href="/material/contact">联系我们</a> ｜
+                    <a ui-sref="skill.partner" href="/partner">合作公司</a></p>
+                <p>
+                    <a ui-sref="skill.material.model" href="/material/model">新人必读</a> ｜
+                    <a ui-sref="skill.notice.list" href="/notice/list">学院公告</a>
+                </p>
+            </div>
+            <div class="col-sm-5 col-xs-12">
+                <p class="lead">旗下网站</p>
+                <p>
+                    <a href="http://www.jnshu.com" target="_blank">IT修真院</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.ptteng.com/" target="_blank">葡萄藤</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="//kenghu.jnshu.com?adopt=1" target="_blank">坑乎</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://wiki.ptteng.com/?p=204" target="_blank">桌游精灵</a>
+                </p>
+                <p>
+                    <a href="http://www.codinglord.com/" target="_blank">编程王科技</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.caochuanyun.com/" target="_blank">草船云</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="//lesson.jnshu.com/lesson" target="_blank">小课堂</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://game.ptteng.com/" target="_blank">葡萄藤轻游戏</a>&nbsp;&nbsp;&nbsp;
+                </p>
+                <p>
+                    <a href="http://guodong.jnshu.com/" target="_blank">果冻公开课</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://www.luoboduo.com/" target="_blank">萝卜多</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://daily.jnshu.com" target="_blank">小日报</a>
+                </p>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+                <p class="lead">微信公众平台</p>
+                <div><img src="http://jns.img.bucket.ks3-cn-beijing.ksyun.com/skill/skill_html/images/code2.jpg"></div>
+            </div>
+        </div>
+    </div>
+</div>
 	
-  <script src="jquery-3.3.1.min.js"></script>
-  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+ <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
