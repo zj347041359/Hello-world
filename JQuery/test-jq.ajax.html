@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <button id="button">click</button>
+    <br />
+    <div id="text"></div>
+    <script>
+        //document.getElementById('button').addEventListener('click',changeText);
+        $("#button").click(changeText);
+        function changeText(){
+            // var xhr =  new XMLHttpRequest();
+            // xhr.open('GET','https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json',true);
+            // console.log(xhr.responseText);
+            $.getJSON('https://gw.alipayobjects.com/os/antvdemo/assets/data/antv-keywords.json',function(data){
+                $('#text').after(data.map(function(item){
+                    return item.name+" ";
+                }))
+                console.log(1);
+            })
+        }
+    </script>
+</body>
+</html>

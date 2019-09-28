@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>镜像分面(转置)</title>
+    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;margin:0;}</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+<script>
+  $.getJSON('https://gw.alipayobjects.com/os/antvdemo/assets/data/population.json', function(data) {
+    var tmp = [];
+    var dates = [];
+    data.male.values.forEach(function(obj) {
+      if (dates.indexOf(obj.date) === -1) {
+        dates.push(obj.date);
+      }
+      obj.age_groups.forEach(function(subObject) {
+        subObject.gender = 'male';
+        subObject.date = obj.date;
+        tmp.push(subObject);
+      });
+    });
+    data.female.values.forEach(function(obj) {
+      obj.age_groups.forEach(function(subObject) {
+        subObject.gender = 'female';
+        subObject.date = obj.date;
+        tmp.push(subObject);
+      });
+    });
+    console.log(tmp);
+    var ds = new DataSet();
+    var dv = ds.createView().source(tmp).transform({
+      type: 'filter',
+      callback: function callback(row) {
+        // 判断某一行是否保留，默认返回true
+        return new Date(row.date * 1000).getFullYear() === new Date(dates[0] * 1000).getFullYear();
+      }
+    });
+    console.log(dv);
+    var chart = new G2.Chart({
+      container: 'mountNode',
+      forceFit: true,
+      height: window.innerHeight
+    });
+    chart.source(dv, {
+      age: {
+        sync: true,
+        tickCount: 11
+      },
+      total_percentage: {
+        sync: true,
+        formatter: function formatter(v) {
+          return v + '%';
+        }
+      },
+      gender: {
+        sync: true
+      }
+    });
+    chart.facet('mirror', {
+      fields: ['gender'],
+      padding: [0, 60, 40, 0],
+      eachView: function eachView(view) {
+        view.interval().position('age*total_percentage').color('gender', ['#1890ff', '#f04864']);
+      }
+    });
+    chart.render();
+  });
+</script>
+</body>
+</html>
