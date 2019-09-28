@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>防抖和节流</title>
+</head>
+<body>
+    <button id='btn'>add</button>
+    
+    <script>
+        
+        let a=1;
+        
+        function add(){
+            a++;
+            console.log(a);
+        }
+
+        //防抖
+        // let timer;
+        // function cli(){
+        //     if(!timer){
+        //         timer = setTimeout (add,2000);
+        //     }else{
+        //         clearTimeout(timer);
+        //         timer = setTimeout (add,2000);
+        //     }
+        // }    
+        // document.getElementById('btn').onclick=cli;
+
+
+        //节流
+        let timer;
+        function cli(){
+            if(!timer){
+                add();
+                timer = setTimeout (function(){console.log(1);timer=null;},2000);
+            }
+        }
+        document.getElementById('btn').onclick=cli;
+    </script>
+   
+</body>
+</html>
