@@ -58,12 +58,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="28" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
-  </component>
+  <component name="ProjectId" id="1UQ0mvB2VOc0wuHwpxEG5fJn4uX" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages />
@@ -81,10 +76,10 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zj347041359.github.io/index.html" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

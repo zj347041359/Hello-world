@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /\d+(?=%)/.exec('100% of US presidents have been male');  // ["100"]，先行断言
+        /\d+(?!%)/.exec('that’s all 44 of them');               // ["44"]，先行否定断言
+
+        /(?<=\$)\d+/.exec('Benjamin Franklin is on the $100 bill');  // ["100"]，后行断言
+        /(?<!\$)\d+/.exec('it’s is worth about €90');                // ["90"]，后行否定断言
+    </script>
+</body>
+</html>
