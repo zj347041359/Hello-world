@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        let url = 'http://localhost:99';
+        //let url = 'https://jsonplaceholder.typicode.com/posts';//get请求
+
+        //fetch json
+        // Request Payload
+        // fetch(url,{
+        //     headers:{
+        //         'content-type': "application/json"
+        //     },
+        //     method:"POST",
+        //     body:JSON.stringify({A:2,B:1}),
+        // })
+        // .then(res=>res.json())
+        // .then(data=>console.log(data))
+        // .catch(e=>console.log(e))
+
+
+        //fetch querystring
+        // Query String Parameters
+        // fetch(`${url}?a=123&b=321`,{
+        //   headers:{
+        //     'content-type': "application/x-www-form-urlencoded"
+        //   },
+        //   method:"POST",
+        //   //body:"a=12&b=33",
+        // }).then(res=>res.json())
+        // .then(data=>console.log(data))
+        // .catch(e=>console.log(e));
+
+        //fetch from-data
+        //Form Data
+        // fetch(url,{
+        //   headers:{
+        //     'content-type': "application/x-www-form-urlencoded"
+        //   },
+        //   method:"POST",
+        //   body:"a=12&b=33",
+        // }).then(res=>res.json())
+        // .then(data=>console.log(data))
+        // .catch(e=>console.log(e))
+
+        //axios 默认为JSON格式
+        // axios({
+        //   url,
+        //   method:"GET",
+        //   data:{a:12}
+        // })
+        //   .then(res=>console.log(res.data));
+
+        //axios form-data
+        // axios({
+        //   url,
+        //   method:"POST",
+        //   headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        //   data:"a=12&b=23"
+        // })
+        //   .then(res=>console.log(res.data));
+
+         //axios querystring
+        // axios({
+        //   url:`${url}?a=123&b=321`,
+        //   method:"POST",
+        // })
+        //   .then(res=>console.log(res.data));
+
+
+    </script>
+</body>
+</html>
