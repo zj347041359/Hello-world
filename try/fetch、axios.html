@@ -12,7 +12,7 @@
         let url = 'http://localhost:99';
         //let url = 'https://jsonplaceholder.typicode.com/posts';//get请求
 
-        //fetch json
+        // fetch json
         // Request Payload
         // fetch(url,{
         //     headers:{
@@ -40,15 +40,15 @@
 
         //fetch from-data
         //Form Data
-        // fetch(url,{
-        //   headers:{
-        //     'content-type': "application/x-www-form-urlencoded"
-        //   },
-        //   method:"POST",
-        //   body:"a=12&b=33",
-        // }).then(res=>res.json())
-        // .then(data=>console.log(data))
-        // .catch(e=>console.log(e))
+        fetch(url,{
+          headers:{
+            'content-type': "application/x-www-form-urlencoded"
+          },
+          method:"POST",
+          body:"a=12&b=33",
+        }).then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(e=>console.log(e))
 
         //axios 默认为JSON格式
         // axios({
