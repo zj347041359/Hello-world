@@ -9,13 +9,13 @@
 <body>
     <script>
        
-        // var obj = {
-        //     name : 'dmxy',
-        //     age : 2019,
-        //     sex : 'male',
-        //     arr : [1,2,3,4]
-        // }
-        // var obj1 = {};
+        var obj = {
+            name : 'dmxy',
+            age : 2019,
+            sex : 'male',
+            arr : [1,2,3,4]
+        }
+        var obj1 = {};
          //浅层克隆，为引用值
         // function clone(origin, target){
         // 	var target = target || {};
@@ -149,31 +149,31 @@
             }
         }
 
-            //数组去重
-            function unrepeat(array){
-                for(var i = 0; i < array.length - 1; i++){
-                    for(var j = 1; j < array.length; j++){
-                        if(array[j] === array[i]){
-                           array.splice(j,1);
-                        }
+        //数组去重
+        function unrepeat(array){
+            for(var i = 0; i < array.length - 1; i++){
+                for(var j = 1; j < array.length; j++){
+                    if(array[j] === array[i]){
+                        array.splice(j,1);
                     }
                 }
-                return array;
             }
+            return array;
+        }
 
-            //数组去重
-            Array.prototype.unique = function () {
-                var obj = {},
-                    arr = [],
-                    len = this.length
-                for(var i = 0; i < len; i++){
-                    if(!obj[this[i]]){
-                        obj[this[i]] = 'abc';
-                        arr.push(this[i]);
-                    }
+        //数组去重
+        Array.prototype.unique = function () {
+            var obj = {},
+                arr = [],
+                len = this.length
+            for(var i = 0; i < len; i++){
+                if(!obj[this[i]]){
+                    obj[this[i]] = 'abc';
+                    arr.push(this[i]);
                 }
-                return arr;
             }
+            return arr;
+        }
     //this的指向：        
     //1.预编译 this --> window
     //2.谁调用的this指向谁

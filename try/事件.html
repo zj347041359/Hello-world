@@ -44,18 +44,18 @@
         // }, false);
 
         //IE独有
-        //div.attachEvent('onclick', function(){});
+        div.attachEvent('onclick', function(){});
         
-            // var li = document.getElementsByTagName('li');
-            // var len = li.length;
-            // for(var i = 0; i < li.length; i++){
-            //     (function(i){
-            //         li[i].addEventListener('click',function(){
-            //         console.log(i);
-            //     }, false)
-            //     }(i))
+            var li = document.getElementsByTagName('li');
+            var len = li.length;
+            for(var i = 0; i < li.length; i++){
+                (function(i){
+                    li[i].addEventListener('click',function(){
+                    console.log(i);
+                }, false)
+                }(i))
             
-            // }
+            }
         
         //兼容性方法
         // function addEvent(elem, type, handle){
