@@ -2,6 +2,7 @@
   "pages":[
 
     "pages/index/index",
+    "pages/activity/index",
     "pages/registered/index",
     "pages/registered/label/label",
     "pages/registered/information/information",

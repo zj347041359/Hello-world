@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view>
+  <view style="background-color: #ffffff">
+    <view>
+      <image src="{{activity.url}}" style="height: 100px" />
+    </view>
+    <view style="height:15px;padding:10px 5px;line-height:15px;border-top: 1px solid #f4f4f4;border-bottom: 1px solid #f4f4f4" >
+      <view >{{activity.title}}</view>
+    </view>
+    <view class="information">
+      <view style="flex:0 0 20px">提示</view>
+      <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+    </view>
+    <view class="information">
+      <view style="flex:0 0 20px">参与条件</view>
+      <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+    </view>
+    <view class="information">
+      <view style="flex:0 0 20px">参与方式</view>
+      <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+    </view>
+    <view class='navigation'>
+      <view wx:for="{{title}}" wx:key="key" class='title'>
+        <image src="{{item.icon}}" style="height: 40px;width:40px;margin:4px 0" />
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view >
+    <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >活动广场</view>
+  </view>
+</view>

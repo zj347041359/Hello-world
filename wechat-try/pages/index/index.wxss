@@ -40,9 +40,9 @@
 .activity{
   display: grid;
   font-size: 14px;
-  grid-template-columns: 27% 40% 27%;
+  grid-template-columns: 25% 44% 25%;
   grid-column-gap: 3%;
-  padding:4px 10px;
+  padding:4px 6px;
   border-bottom: 1px solid #f0f0f0;
 }
 .btn{
