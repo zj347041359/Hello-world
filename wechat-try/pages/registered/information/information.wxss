@@ -1,0 +1,17 @@
+
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+}
+.gender{
+    padding:5px 15px;
+    border-radius: 40px;
+    margin:10px 0;
+    background-color: #F2F6F9;
+}
+.selectedGender{
+    padding:5px 15px;
+    border-radius: 40px;
+    margin:10px 0;
+    background-color: #DF4040;
+}

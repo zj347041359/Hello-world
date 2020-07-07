@@ -1,0 +1,16 @@
+.label{
+    border:1px solid #f0f0f0;
+    border-radius: 10px;
+    padding:1px;
+    text-align: center;
+    margin:8px 0;
+}
+.selectedLabel{
+    border:1px solid #f0f0f0;
+    border-radius: 10px;
+    padding:1px;
+    text-align: center;
+    background-color: #DF4040;
+    color:#fff;
+    margin:8px 0;
+}

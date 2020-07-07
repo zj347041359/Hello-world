@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view>
+  <view wx:if="{{!warrant}}" class="mask">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登陆 </button>
+  </view>
+  <view>
+    <view>
+      <image src="../../images/invite.png" style="height: 100px" />
+    </view>
+    <view style="height:15px;line-height:15px" >
+      <view class='horn'>
+        <mp-icon wx:if="{{hasUserInfo}}" icon="volume-up" color="#DF4040" size="{{16}}"></mp-icon>
+      </view>
+      <view class="prompt" >新入会请加客服微信：ainuoermy1</view>
+    </view>
+    <view class="dividing" />
+    <view class='navigation'>
+      <view wx:for="{{title}}" wx:key="key" class='title'>
+        <image src="{{item.icon}}" style="height: 40px;width:40px;margin:4px 0" />
+        {{item.title}}
+      </view>
+    </view>
+    <view class="dividing" />
+  </view>
+  <view >
+    <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >活动广场</view>
+    <view wx:for="{{activity}}" wx:key="id" wx:for-item="item" class="activity" >
+      <view style="display: flex;justify-content: center;align-items: center">
+        <image src="{{item.url}}" style="height: 65px;width:65px;border-radius: 10px" />
+      </view>
+      <view style="display: flex;flex-direction: column;justify-content: space-around">
+        <view>{{item.title}}</view>
+        <view style="display: flex;font-size: 12px"><view>预约时间：</view><view style="color:#DF4040">{{item.title}}</view></view>
+        <view wx:for="{{item.storeNames}}" wx:for-item="name" style="font-size: 12px">{{name}}</view>
+      </view>
+      <view style="text-align: center">
+        <button wx:if="{{item.join}}" size="mini" bindtap="join" style="background-color: #DF4040;border-radius: 15px;color:#fff;font-size:12px;padding:0 5px;margin:10px 0;">预约报名</button>
+        <button wx:if="{{!item.join}}" size="mini" style="background-color: #E4E4E4;border-radius: 15px;color:black;font-size:12px;padding:0 5px;margin:10px 0;">预约报名</button>
+        <view>剩余：{{item.limitedNumber-item.reservedNumber}}份</view>
+      </view>
+    </view>
+  </view>
+</view>

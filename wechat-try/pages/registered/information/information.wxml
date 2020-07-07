@@ -1,0 +1,38 @@
+<view>
+    <view style="text-align: center;margin:10px 0">
+        <view>欢迎来到小ai管家</view>
+        <view>完善信息后一定时间不能修改</view>
+    </view>
+    <view style="display: flex;justify-content: space-around;align-items: baseline">
+        <view>
+            <view class="{{gender==3?'selectedGender':'gender'}}" bindtap="chooseMan">
+                <image src="../../../images/man.png" style="height: 70px;width: 55px" />
+            </view>
+            <view style="text-align: center">男</view>
+        </view>
+        <view>
+            <view class="{{gender==5?'selectedGender':'gender'}}" bindtap="chooseWoman">
+                <image src="../../../images/woman.png" style="height: 70px;width: 55px" />
+            </view>
+            <view style="text-align: center">女</view>
+        </view>
+    </view>
+    <view style="text-align: center">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                选择年龄：{{array[index]}}
+            </view>
+        </picker>
+    </view>
+    <picker-view indicator-style="height: 45px;" style="width: 100%; height: 150px;text-align: center"  bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{provinceData}}" style="line-height: 45px">{{item}}省</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{cityData}}" style="line-height: 45px">{{item}}市</view>
+        </picker-view-column>
+    </picker-view>
+    <button wx-if="{{!gender}}" size="mini" style="margin-top:15px;width:100%">请完善用户信息</button>
+    <button wx-if="{{gender}}" bindtap="next" size="mini" style="background-color: #DF4040;color:#fff;margin-top:15px;width:100%">下一步</button>
+
+</view>

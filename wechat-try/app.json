@@ -1,0 +1,45 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/registered/index",
+    "pages/registered/label/label",
+    "pages/registered/information/information",
+    "pages/gift/index",
+    "pages/my/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DF4040",
+    "navigationBarTitleText": "小ai管家",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "color":"#B2B2B2",
+    "selectedColor":"#DF4040",
+    "backgroundColor":"#fff",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/selectedHome.png"
+      },
+      {
+        "pagePath":"pages/gift/index",
+        "text":"礼品专区",
+        "iconPath":"images/gift.png",
+        "selectedIconPath":"images/selectedGift.png"
+      },
+      {
+        "pagePath":"pages/my/index",
+        "text":"我的",
+        "iconPath":"images/my.png",
+        "selectedIconPath":"images/selectedMy.png"
+      }
+    ]
+  }
+}

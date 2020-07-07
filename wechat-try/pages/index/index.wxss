@@ -1,0 +1,63 @@
+/**index.wxss**/
+.navigation{
+  display: flex;
+  margin:0 10px;
+  font-size: 18px;
+  color: #8C888D;
+}
+.title{
+  flex-grow:1;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  font-size: 10px;
+}
+.dividing{
+  background-color: #F3F3F3;
+  height: 5px;
+  margin:5px 0;
+}
+.horn{
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.prompt{
+  font-size: 14px;
+  display: inline-block;
+}
+.mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color:#f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.activity{
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: 27% 40% 27%;
+  grid-column-gap: 3%;
+  padding:4px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.btn{
+  background-color: #DF4040;
+  border-radius: 15px;
+  color:#fff;
+  font-size:12px;
+  padding:0 5px;
+  margin:10px 0;
+}
+.disabledBtn{
+  background-color: #E4E4E4;
+  border-radius: 15px;
+  color:black;
+  font-size:12px;
+  padding:0 5px;
+  margin:10px 0;
+}

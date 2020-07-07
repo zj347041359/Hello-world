@@ -20,6 +20,15 @@
 
 		document.write("<br>");
 	}
+
+	for(i=100;i<1000;i++){
+		var b=parseInt(i/100);
+		var s=parseInt((i-b*100)/10);
+		var g=i-b*100-s*10;
+		if(b*b*b+s*s*s+g*g*g==i){
+			document.write(i+"<br>");
+		}
+	}
 </script>
 </head>
 <body>

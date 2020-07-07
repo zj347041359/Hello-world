@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view>
+  <view class="logo">
+    <image src="../../images/logo.png" style="height: 50px;width: 50px" />
+  </view>
+  <view class="form">
+    <form catchsubmit="formSubmit" >
+      <view class="input">
+        <image src="../../images/code.png" style="height: 20px;width: 20px" />
+        <input name="invitationCode" placeholder="请输入邀请码" />
+      </view>
+      <view class="input">
+        <image src="../../images/phone.png" style="height: 20px;width: 20px" />
+        <input name="phone" placeholder="请输入要绑定的手机号" />
+      </view>
+
+      <button form-type="submit" size="mini" style="background-color: #DF4040;color:#fff;margin-top:15px;width:100%">注册</button>
+      <text style="font-size: 12px">点击“注册”即同意《注册协议》</text>
+    </form>
+
+  </view>
+</view>

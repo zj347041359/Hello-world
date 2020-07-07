@@ -1,0 +1,15 @@
+<view>
+    <view style="text-align: center;margin:10px 0">
+        <text>选择感兴趣的标签</text>
+        <view>将根据选择的标签个性化推荐活动</view>
+    </view>
+    <view>
+        <view wx:for="{{labelData}}" wx:key="labelData" wx:for-item="labelType" style="padding:0 10px">
+            <view style="text-align: center;margin:10px 0">{{labelType.name}}(<view style="display: inline-block;color:#DF4040;margin:0 5px ">{{labelJson[labelType.id]?labelJson[labelType.id].length:'0'}}</view>/{{labelType.maxChoices}})</view>
+            <view style="display: grid;grid-template-columns:30% 30% 30%;grid-column-gap:5%;font-size: 14px" >
+                <view wx:for="{{labelType.labels}}" wx:key="label" wx:for-item="label" bindtap="chooseLabel" data-type="{{labelType.id}}" data-label="{{label.id}}"  class="{{chooseLabel[label.id]?'selectedLabel':'label'}}">{{label.name}}</view>
+            </view>
+        </view>
+    </view>
+    <button bindtap="submit" size="mini" style="background-color: #DF4040;color:#fff;margin-top:15px;width:100%">提交</button>
+</view>
