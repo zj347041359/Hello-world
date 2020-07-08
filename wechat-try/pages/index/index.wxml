@@ -26,12 +26,14 @@
     <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >活动广场</view>
     <view wx:for="{{activity}}" wx:key="id" wx:for-item="item" wx:for-index="idx" class="activity" >
       <view style="display: flex;justify-content: center;align-items: center">
-        <image src="{{item.url}}" style="height: 65px;width:65px;border-radius: 10px" />
+        <image src="{{item.url}}" style="height: 70px;width:70px;border-radius: 10px" />
       </view>
       <view style="display: flex;flex-direction: column;justify-content: space-around">
         <view>{{item.title}}</view>
-        <view style="display: flex;font-size: 12px"><view>剩余时间：</view><view style="color:#DF4040">{{countdownTime[idx]}}</view></view>
-        <view wx:for="{{item.storeNames}}" wx:for-item="name" style="font-size: 12px">{{name}}</view>
+        <view style="display: flex;font-size: 10px;color:#B2B2B2"><view>剩余时间：</view><view style="color:#DF4040">{{countdownTime[idx]}}</view></view>
+        <view style="display: flex">
+          <view wx:for="{{item.storeNames}}" wx:for-item="name" style="font-size: 12px">{{name}} </view>
+        </view>
       </view>
       <view style="text-align: center">
         <button wx:if="{{!item.join}}" size="mini" bindtap="join" data-id="{{item.id}}" style="background-color: #DF4040;border-radius: 15px;color:#fff;font-size:12px;padding:0 5px;margin:10px 0;">预约报名</button>

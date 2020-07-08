@@ -8,16 +8,36 @@
       <view >{{activity.title}}</view>
     </view>
     <view class="information">
-      <view style="flex:0 0 20px">提示</view>
+      <view style="flex:0 0 50px">提示</view>
       <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
     </view>
     <view class="information">
-      <view style="flex:0 0 20px">参与条件</view>
-      <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+      <view style="flex:0 0 80px">参与条件</view>
+      <view style="flex:1">
+        <view  wx:for="{{label}}" wx:for-item="label" >
+          {{label}}
+        </view>
+      </view>
     </view>
     <view class="information">
-      <view style="flex:0 0 20px">参与方式</view>
-      <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+      <view style="flex:0 0 80px">参与方式</view>
+      <picker bindchange="changeWay" value="{{wayIndex}}" range="{{way}}" style="flex:1" >
+        <view style="display: flex;align-items: center;justify-content: space-between;margin-right:10px">
+          <view>{{way[wayIndex]}}</view>
+          <mp-icon icon="arrow" color="#333333" size="{{10}}"  />
+        </view>
+      </picker>
+    </view>
+    <view class="information">
+      <view style="flex:0 0 80px">预定时间</view>
+      <picker bindchange="changeTime" value="{{timeIndex}}" range="{{time}}">
+        <view style="display: flex;align-items: center;justify-content: space-between;margin-right:10px">
+          <view style="flex-direction: column">
+            <view>{{time[wayIndex]}}</view>
+          </view>
+          <mp-icon icon="arrow" color="#333333" size="{{10}}"  />
+        </view>
+      </picker>
     </view>
     <view class='navigation'>
       <view wx:for="{{title}}" wx:key="key" class='title'>
