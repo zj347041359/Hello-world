@@ -14,9 +14,10 @@
     <view class="information">
       <view style="flex:0 0 80px">参与条件</view>
       <view style="flex:1">
-        <view  wx:for="{{label}}" wx:for-item="label" >
-          {{label}}
+        <view  wx:for="{{label}}" wx:for-item="idx" >
+          {{idx}}
         </view>
+        {{label.length==0?"无":null}}
       </view>
     </view>
     <view class="information">
@@ -46,7 +47,67 @@
       </view>
     </view>
   </view>
-  <view >
-    <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >活动广场</view>
+  <view style="background-color: #fff;font-size: 12px;margin:4px 0"  >
+    <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >
+      <view style="display: flex">
+        <view style="width:6px;height:15px;background-color:#DF4040;margin-right:10PX;" />
+        <view >选择下单商品</view>
+      </view>
+      <view style="font-size: 10px;color:#727270">每人预定{{activity.stylesQuantity}}款，每款限购1件。若已抢完，请选择其他商品</view>
+    </view>
+    <view wx:for="{{order}}" wx:key="id" wx:for-item="item" wx:for-index="idx" class="order" >
+      <view style="display: flex;justify-content: center;align-items: center">
+        <image src="{{item.mainImageUrl}}" style="height: 70px;width:70px;border-radius: 10px" />
+      </view>
+      <view style="display: flex;flex-direction: column;justify-content: space-around">
+        <view>{{item.merchandiseName}}</view>
+        <view style="display: flex">
+          <view style="color:#9B9A9B;text-decoration:line-through">￥{{item.sellingPrice}}</view>
+          <view style="border-radius: 10px;background-color: #DF4040;margin-left:3px;padding:2px 5px;color:#fff;font-size: 10px;display: flex;align-items: center">
+            <view>拼团价</view>
+            <view style="font-size: 12px;margin-left: 3px;">￥{{item.groupPrice}}</view>
+          </view>
+        </view>
+        <view>已拼</view>
+      </view>
+      <view style="text-align: center;color:#DF4040;font-size: 14px;padding-top: 10px">
+        <view>{{item.point}}积分</view>
+        <view wx-if="{{!chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#333333" size="{{18}}" /></view>
+        <view wx-if="{{chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#DF4040" size="{{18}}" /></view>
+      </view>
+    </view>
+  </view>
+  <view  style="background-color: #fff;font-size: 12px;">
+    <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >
+      <view style="display: flex">
+        <view style="width:6px;height:15px;background-color:#DF4040;margin-right:10PX;" />
+        <view>兑换礼品</view>
+        <view style="color:#9B9B9D">（选填）</view>
+      </view>
+      <view style="font-size: 10px;color:#9B9B9D">去礼品库兑换礼品，根据礼品价值扣除想应的积分余额</view>
+    </view>
+    <view>
+
+    </view>
+
+  </view>
+  <view class="blank"></view>
+  <view class="bottomBar">
+    <view>
+      <view wx-if="{{!chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#333333" size="{{18}}" /></view>
+      <view wx-if="{{chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#DF4040" size="{{18}}" /></view>
+      <view>已选（1）</view>
+    </view>
+    <view>
+      <view>
+        <view>合计：</view>
+        <view>￥59</view>
+      </view>
+      <view>
+        <view>积分：</view>
+        <view>59</view>
+      </view>
+    </view>
+    <view style="text-align: center;line-height: 50px;background-color: #DF4040;color:#fff;">立即报名</view>
   </view>
 </view>

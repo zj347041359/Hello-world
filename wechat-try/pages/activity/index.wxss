@@ -24,3 +24,24 @@ page{
   border-top: 1px solid #f4f4f4;
   padding:5px;
 }
+.order{
+  display: grid;
+  font-size: 12px;
+  grid-template-columns: 30% 46% 20%;
+  grid-column-gap: 2%;
+  padding:4px 6px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.blank{
+  height: 50px;
+}
+.bottomBar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}

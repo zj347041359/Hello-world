@@ -13,6 +13,7 @@ Page({
     time:[],
     label:[],
     order:[],
+    chooseOrder:{},
   },
   onLoad: function (e) {
     let { id } = e
@@ -20,7 +21,6 @@ Page({
       if(res.statusCode==200){
         let { data } = res
         let time=[]
-        data.orderJson=JSON.parse(data.orderJson)
         data.labelJson=JSON.parse(data.labelJson)
         data.appointmentList.forEach(item=>{
           let sDate = item.startTime.split(' ')[0]
@@ -32,7 +32,7 @@ Page({
         this.setData({
           activity:data,
           label:data.labelJson,
-          order:data.orderJson,
+          order:data.ordersList,
           time
         })
       }
@@ -47,7 +47,16 @@ Page({
     })
   },
   changeTime:function (e) {
-    console.log(e)
+    this.setData({
+      timeIndex:e.detail.value
+    })
   },
-
+  select:function (e) {
+    let { chooseOrder} = this.data
+    let id =e.currentTarget.dataset.id
+    chooseOrder[id]?chooseOrder[id]=false:chooseOrder[id]=true
+    this.setData({
+      chooseOrder
+    })
+  }
 })

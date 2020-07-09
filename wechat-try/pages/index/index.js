@@ -46,6 +46,7 @@ Page({
               wx.navigateTo({url:"/pages/registered/information/information"})
             }else if(JSON.stringify(data) != "{}"){
               app.globalData.userInfo = data
+              this.checking()
             }
           }else{
             wx.showToast({title: `网络异常`, icon: 'none', duration:3000})
@@ -56,30 +57,33 @@ Page({
 
   },
   onShow: function () {
-    let _this = this
     if(!app.globalData.userInfo){
-      request.get('member/me',null,e=> {
-        if(e.statusCode==200){
-          app.globalData.userInfo=e.data
-          request.get('applets/activity/join/find',null,res=>{
-            if(res.statusCode==200){
-              let endTime = []
-              let { data } = res
-              data.forEach(item=>{
-                let time = item.registrationETime.replace(/-/g, "/")+' 23:59:59'
-                 endTime.push(new Date(time).getTime())
-              })
-              _this.setData({
-                activity: data,
-                endTime
-              })
-              _this.countdown()
-            }
-          },e=>console.log(e.data.message))
-        }
-      },e=>console.log(e.data.message))
+      this.checking()
     }
 
+  },
+  checking:function(){
+    let _this = this
+    request.get('member/me',null,e=> {
+      if(e.statusCode==200){
+        app.globalData.userInfo=e.data
+        request.get('applets/activity/join/find',null,res=>{
+          if(res.statusCode==200){
+            let endTime = []
+            let { data } = res
+            data.forEach(item=>{
+              let time = item.registrationETime.replace(/-/g, "/")+' 23:59:59'
+              endTime.push(new Date(time).getTime())
+            })
+            _this.setData({
+              activity: data,
+              endTime
+            })
+            _this.countdown()
+          }
+        },e=>console.log(e.data.message))
+      }
+    },e=>console.log(e.data.message))
   },
   getUserInfo: function(e) {
     let { detail} = e
