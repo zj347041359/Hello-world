@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--hot.wxml-->
 <view>
   <view class="logo">
     <image src="../../images/logo.png" style="height: 50px;width: 50px" />

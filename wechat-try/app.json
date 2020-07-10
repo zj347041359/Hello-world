@@ -1,8 +1,8 @@
 {
   "pages":[
-
     "pages/index/index",
-    "pages/activity/index",
+    "pages/activity/clearance",
+    "pages/activity/hot",
     "pages/registered/index",
     "pages/registered/label/label",
     "pages/registered/information/information",

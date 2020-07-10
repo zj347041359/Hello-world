@@ -1,4 +1,13 @@
-<!--index.wxml-->
-<view class="container">
-  gift
+<!--hot.wxml-->
+<view >
+  <view style="background-color: #DF4040;padding: 8px 10px;">
+    <input class="search" placeholder-style="font-size:12px" placeholder="请输入礼品关键词搜索" type='text' confirm-typ="search" bindconfirm="search" />
+  </view>
+  <view style="display:flex">
+    <view class="left">
+      <view class="{{chooseCategory==null?'select':'category'}}">全部</view>
+      <view wx:for="{{category}}" wx:for-item="item" class="{{chooseCategory==item.id?'select':'category'}}" >{{item.name}}</view>
+    </view>
+    <view class="right"></view>
+  </view>
 </view>

@@ -1,4 +1,4 @@
-/**index.wxss**/
+/**hot.wxss**/
 .navigation{
   display: flex;
   margin:0 10px;
@@ -40,8 +40,8 @@
 .activity{
   display: grid;
   font-size: 12px;
-  grid-template-columns: 30% 46% 20%;
-  grid-column-gap: 2%;
+  grid-template-columns: 26% 46% 26%;
+  grid-column-gap: 1%;
   padding:4px 6px;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -50,14 +50,16 @@
   border-radius: 15px;
   color:#fff;
   font-size:12px;
-  padding:0 5px;
+  padding:4px 6px;
   margin:10px 0;
+  text-align: center;
 }
 .disabledBtn{
   background-color: #E4E4E4;
   border-radius: 15px;
   color:black;
   font-size:12px;
-  padding:0 5px;
+  padding:4px 6px;
   margin:10px 0;
+  text-align: center;
 }

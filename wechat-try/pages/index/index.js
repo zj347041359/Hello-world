@@ -1,4 +1,4 @@
-//index.js
+//hot.js
 //获取应用实例
 import request from "../../utils/request";
 
@@ -120,8 +120,18 @@ Page({
   },
   join:function (e) {
     let id=e.currentTarget.dataset.id
-    wx.navigateTo({
-      url:`/pages/activity/index?id=${id}`,
-    })
+    let type=e.currentTarget.dataset.type
+    let join=e.currentTarget.dataset.join
+    if(!join){
+      if(type =='hot'){
+        wx.navigateTo({
+          url:`/pages/activity/hot?id=${id}`,
+        })
+      }else{
+        wx.navigateTo({
+          url:`/pages/activity/clearance?id=${id}`,
+        })
+      }
+    }
   }
 })

@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--hot.wxml-->
 <view>
   <view wx:if="{{!warrant}}" class="mask">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登陆 </button>
@@ -35,10 +35,9 @@
           <view wx:for="{{item.storeNames}}" wx:for-item="name" style="font-size: 12px">{{name}} </view>
         </view>
       </view>
-      <view style="text-align: center">
-        <button wx:if="{{!item.join}}" size="mini" bindtap="join" data-id="{{item.id}}" style="background-color: #DF4040;border-radius: 15px;color:#fff;font-size:12px;padding:0 5px;margin:10px 0;">预约报名</button>
-        <button wx:if="{{item.join}}" size="mini" style="background-color: #E4E4E4;border-radius: 15px;color:black;font-size:12px;padding:0 5px;margin:10px 0;">预约报名</button>
-        <view>剩余：{{item.limitedNumber-item.reservedNumber}}份</view>
+      <view >
+        <view class="{{!item.join?'btn':'disabledBtn'}}" bindtap="join" data-id="{{item.id}}" data-type="{{item.activityType}}" data-join="{{item.join}}">预约报名</view>
+        <view style="text-align: center">剩余：{{item.limitedNumber-item.reservedNumber}}份</view>
       </view>
     </view>
   </view>

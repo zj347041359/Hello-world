@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--hot.wxml-->
 <view >
   <view style="background-color: #DF4040;width: 100%;padding-top: 10px">
     <view style="display: flex;justify-content:space-between">

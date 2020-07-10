@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--hot.wxml-->
 <view>
   <view style="background-color: #ffffff">
     <view>
@@ -93,21 +93,23 @@
   </view>
   <view class="blank"></view>
   <view class="bottomBar">
-    <view>
-      <view wx-if="{{!chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#333333" size="{{18}}" /></view>
-      <view wx-if="{{chooseOrder[item.id]}}"><mp-icon bindtap="select" data-id="{{item.id}}" icon="done2" color="#DF4040" size="{{18}}" /></view>
-      <view>已选（1）</view>
+    <view style="display: flex;justify-content: center;align-items: center">
+      <view style="margin:0 10px;" >
+        <mp-icon wx-if="{{!chooseOrder[item.id]}}" bindtap="select" data-id="{{item.id}}" icon="done2" color="#333333" size="{{18}}" />
+        <mp-icon wx-if="{{chooseOrder[item.id]}}" bindtap="select" data-id="{{item.id}}" icon="done2" color="#DF4040" size="{{18}}" />
+      </view>
+      <view style="font-size: 12px;color:#9B9B9D">已选（1）</view>
     </view>
-    <view>
-      <view>
+    <view >
+      <view style="display: flex;font-size: 12px">
         <view>合计：</view>
-        <view>￥59</view>
+        <view style="color:#DF4040">￥59</view>
       </view>
-      <view>
+      <view style="display: flex;font-size: 12px;color:#9B9B9D">
         <view>积分：</view>
-        <view>59</view>
+        <view style="color:#DF4040">59</view>
       </view>
     </view>
-    <view style="text-align: center;line-height: 50px;background-color: #DF4040;color:#fff;">立即报名</view>
+    <view style="background-color: #DF4040;color:#fff;display: flex;justify-content: center;align-items: center;padding:10px 15px;font-size: 12px">立即报名</view>
   </view>
 </view>

@@ -1,12 +1,26 @@
-/**index.wxss**/
-.mask{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color:#f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/**hot.wxss**/
+page{
+    background-color: #f4f4f4;
+}
+.search{
+    background-color: #fff;
+    border-radius: 4px;
+    padding:2px 4px;
+}
+.left{
+    flex: 0 0 50px;
+    background-color: #fff;
+}
+.right{
+    flex: 0 0 1;
+}
+.select{
+    margin:6px 0;
+    padding:4px 6px;
+    border-left:2px solid #DF4040;
+    height:30px;
+    background-color:#f4f4f4 ;
+}
+.category{
+    height:30px;
 }

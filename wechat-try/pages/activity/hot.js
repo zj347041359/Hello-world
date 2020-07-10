@@ -1,4 +1,4 @@
-//index.js
+//hot.js
 //获取应用实例
 import request from "../../utils/request";
 

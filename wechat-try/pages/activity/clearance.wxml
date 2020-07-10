@@ -1,0 +1,120 @@
+<!--hot.wxml-->
+<view>
+    <view style="background-color: #ffffff">
+        <view>
+            <image src="{{activity.url}}" style="height: 100px" />
+        </view>
+        <view style="height:15px;padding:10px 5px;line-height:15px;border-top: 1px solid #f4f4f4;border-bottom: 1px solid #f4f4f4" >
+            <view >{{activity.title}}</view>
+        </view>
+        <view class="information">
+            <view style="flex:0 0 50px">提示</view>
+            <view style="flex:1">会员参加清仓拼团活动仅限兑换礼品，无积分</view>
+        </view>
+        <view class="information">
+            <view style="flex:0 0 80px">参与条件</view>
+            <view style="flex:1">
+                <view  wx:for="{{label}}" wx:for-item="idx" >
+                    {{idx}}
+                </view>
+                {{label.length==0?"无":null}}
+            </view>
+        </view>
+        <view class="information">
+            <view style="flex:0 0 80px">参与方式</view>
+            <picker bindchange="changeWay" value="{{wayIndex}}" range="{{way}}" style="flex:1" >
+                <view style="display: flex;align-items: center;justify-content: space-between;margin-right:10px">
+                    <view>{{way[wayIndex]}}</view>
+                    <mp-icon icon="arrow" color="#333333" size="{{10}}"  />
+                </view>
+            </picker>
+        </view>
+        <view class="information">
+            <view style="flex:0 0 80px">预定时间</view>
+            <picker bindchange="changeTime" value="{{timeIndex}}" range="{{time}}">
+                <view style="display: flex;align-items: center;justify-content: space-between;margin-right:10px">
+                    <view style="flex-direction: column">
+                        <view>{{time[wayIndex]}}</view>
+                    </view>
+                    <mp-icon icon="arrow" color="#333333" size="{{10}}"  />
+                </view>
+            </picker>
+        </view>
+        <view class='navigation'>
+            <view wx:for="{{title}}" wx:key="key" class='title'>
+                <image src="{{item.icon}}" style="height: 40px;width:40px;margin:4px 0" />
+                {{item.title}}
+            </view>
+        </view>
+    </view>
+    <view style="background-color: #fff;font-size: 12px;margin:4px 0"  >
+        <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >
+            <view style="display: flex">
+                <view style="width:6px;height:15px;background-color:#DF4040;margin-right:10PX;" />
+                <view >选择下单商品</view>
+            </view>
+            <view style="font-size: 10px;color:#727270">每人预定{{activity.stylesQuantity}}款，每款限购1件。若已抢完，请选择其他商品</view>
+        </view>
+        <view wx:for="{{order}}" wx:key="id" wx:for-item="item" wx:for-index="idx" class="order" >
+            <view style="display: flex;justify-content: center;align-items: center">
+                <image src="{{item.mainImageUrl}}" style="height: 70px;width:70px;border-radius: 10px" />
+            </view>
+            <view style="display: flex;flex-direction: column;justify-content: space-around">
+                <view>{{item.merchandiseName}}</view>
+                <view style="display: flex">
+                    <view style="color:#9B9A9B;text-decoration:line-through">￥{{item.sellingPrice}}</view>
+                    <view style="border-radius: 10px;background-color: #DF4040;margin-left:3px;padding:2px 5px;color:#fff;font-size: 10px;display: flex;align-items: center">
+                        <view>拼团价</view>
+                        <view style="font-size: 12px;margin-left: 3px;">￥{{item.groupPrice}}</view>
+                    </view>
+                </view>
+                <view>已拼</view>
+            </view>
+            <view style="text-align: center;color:#DF4040;font-size: 14px;padding-top: 10px">
+                <view>{{item.point}}积分</view>
+               <mp-icon bindtap="selectOrder" data-id="{{item.id}}" color="{{!chooseOrder[item.id]?'#333333':'#DF4040'}}" icon="done2" size="{{18}}" />
+            </view>
+        </view>
+    </view>
+    <view  style="background-color: #fff;font-size: 12px;">
+        <view style="padding:0 0 5px 8px;border-bottom:1px solid #f0f0f0" >
+            <view style="display: flex">
+                <view style="width:6px;height:15px;background-color:#DF4040;margin-right:10PX;" />
+                <view>选择本次的礼品</view>
+            </view>
+            <view style="font-size: 10px;color:#9B9B9D">每人选择一款，若已抢完，请选择其他礼品</view>
+        </view>
+        <view wx:for="{{gift}}" wx:for-item="item" class="order" >
+            <view style="display: flex;justify-content: center;align-items: center">
+                <image src="{{item.coverPictureUrl}}" style="height: 70px;width:70px;border-radius: 10px" />
+            </view>
+            <view style="display: flex;flex-direction: column;justify-content: space-around">
+                <view>{{item.name }}</view>
+                <view>库存 {{item.inventory-item.exchangeAmount}} 件</view>
+            </view>
+            <view style="text-align: center;color:#DF4040;font-size: 14px;padding-top: 10px">
+                <mp-icon bindtap="selectGift" data-id="{{item.id}}" icon="done2" color="{{chooseGift!=item.id?'#333333':'#DF4040'}}" size="{{18}}" />
+            </view>
+        </view>
+    </view>
+    <view class="blank"></view>
+    <view class="bottomBar">
+        <view style="display: flex;justify-content: center;align-items: center">
+            <view style="margin:0 10px;" >
+                <mp-icon wx-if="{{chooseOrder[item.id]}}" bindtap="select" data-id="{{item.id}}" icon="done2" color="{{chooseOrder[item.id]?'#333333':'#DF4040'}}" size="{{18}}" />
+            </view>
+            <view style="font-size: 12px;color:#9B9B9D">已选（1）</view>
+        </view>
+        <view >
+            <view style="display: flex;font-size: 12px">
+                <view>合计：</view>
+                <view style="color:#DF4040">￥59</view>
+            </view>
+            <view style="display: flex;font-size: 12px;color:#9B9B9D">
+                <view>兑换</view>
+                <view style="color:#DF4040">59</view>
+            </view>
+        </view>
+        <view style="background-color: #DF4040;color:#fff;display: flex;justify-content: center;align-items: center;padding:10px 15px;font-size: 12px">立即报名</view>
+    </view>
+</view>
