@@ -1,8 +1,8 @@
 <!--hot.wxml-->
 <view>
-  <view wx:if="{{!warrant}}" class="mask">
+  <!-- <view wx:if="{{!warrant}}" class="mask">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登陆 </button>
-  </view>
+  </view> -->
   <view>
     <view>
       <image src="../../images/invite.png" style="height: 100px" />
@@ -15,9 +15,9 @@
     </view>
     <view class="dividing" />
     <view class='navigation'>
-      <view wx:for="{{title}}" wx:key="key" class='title'>
-        <image src="{{item.icon}}" style="height: 40px;width:40px;margin:4px 0" />
-        {{item.title}}
+      <view wx:for="{{title}}" wx:key="key" wx:for-item="item" class='title'>
+        <image src="{{item.icon}}" style="height: 40px;width:40px;margin:4px 0" bindtap="prompt"  data-title="{{item.title}}" />
+        <view bindtap="prompt"  data-title="{{item.title}}" >{{item.title}}</view>
       </view>
     </view>
     <view class="dividing" />

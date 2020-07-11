@@ -1,0 +1,38 @@
+/**hot.wxss**/
+page{
+    background-color: #f4f4f4;
+  }
+  .memberType{
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    background-color: #E35E5E;
+    height: 20px;
+    font-size: 12px;
+    color:#fff;
+    padding:3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .member{
+    background-color: #5B5A65;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    margin:0 15px;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+    color:#fff;
+  }
+  .options{
+    display: flex;
+    padding:0 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border:1px solid #F4F4F4;
+    background-color: #fff;
+  }
+  

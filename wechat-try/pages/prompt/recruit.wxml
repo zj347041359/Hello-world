@@ -1,0 +1,49 @@
+<!--hot.wxml-->
+<view >
+    <view style="background-color: #DF4040;width: 100%;padding-top: 10px">
+      <view style="display: flex;justify-content:space-between">
+        <view style="display: flex">
+          <view>
+            头像
+          </view>
+          <view>
+            <view>南宫</view>
+            <view>1111</view>
+          </view>
+        </view>
+        <view class="memberType"><image src="../../images/member.png" style="height: 14px;width:14px;margin:0 4px" />普通会员<mp-icon icon="arrow" color="#fff" style="margin:0 4px" size="{{12}}" /></view>
+      </view>
+      <view class="member">
+        <view style="color:#FFE8B4;font-size: 13px">普通会员</view>
+        <view>成为团长，邀请越多赚越多</view>
+        <view style="background-color: #FFE8B4;border-radius: 10px;margin:1px;padding:2px;color:#333333;display: flex;align-items: center"><view>立即申请</view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+    </view>
+    <view style="margin-top: 10px">
+      <view class="options">
+        <view><image src="../../images/integral.png" style="height: 14px;width:14px;margin:0 10px" />我的积分</view>
+        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+      <view class="options">
+        <view><image src="../../images/activity.png" style="height: 14px;width:14px;margin:0 10px" />我的活动</view>
+        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+    </view>
+    <view style="margin-top: 10px">
+      <view class="options">
+        <view><image src="../../images/exchange.png" style="height: 14px;width:14px;margin:0 10px" />我的兑换</view>
+        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+      <view class="options">
+        <view><image src="../../images/data.png" style="height: 14px;width:14px;margin:0 10px" />我的资料</view>
+        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+    </view>
+    <view style="margin-top: 10px">
+      <view class="options">
+        <view><image src="../../images/service.png" style="height: 14px;width:14px;margin:0 10px" />联系客服</view>
+        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      </view>
+    </view>
+  </view>
+  

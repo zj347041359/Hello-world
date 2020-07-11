@@ -3,6 +3,8 @@
     "pages/index/index",
     "pages/activity/clearance",
     "pages/activity/hot",
+    "pages/prompt/guide",
+    "pages/prompt/recruit",
     "pages/registered/index",
     "pages/registered/label/label",
     "pages/registered/information/information",
