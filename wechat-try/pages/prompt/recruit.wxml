@@ -1,49 +1,61 @@
 <!--hot.wxml-->
-<view >
-    <view style="background-color: #DF4040;width: 100%;padding-top: 10px">
-      <view style="display: flex;justify-content:space-between">
-        <view style="display: flex">
-          <view>
-            头像
-          </view>
-          <view>
-            <view>南宫</view>
-            <view>1111</view>
-          </view>
-        </view>
-        <view class="memberType"><image src="../../images/member.png" style="height: 14px;width:14px;margin:0 4px" />普通会员<mp-icon icon="arrow" color="#fff" style="margin:0 4px" size="{{12}}" /></view>
+<view style="padding:0 10px">
+  <view style="text-indent:2em;margin:10px 0">
+    小ai管家诚邀广大客户朋友加入会员，一起兼职、购物、创业！会员具有一定粉丝好友可以通过自荐申请成为团长，团长邀请好友入会参加活动可获得相应的拓客佣金，尊享更多的权益！
+  </view>
+  <view class='title'>
+      一、团长职责
+  </view>
+  <view>
+    1.招募会员：首要负责新会员的招募，包括会员的好友裂变。会员量级越大，拼团任务或消费机会越多，团长效益越高；
+  </view>
+  <view>
+    2.会员管理：依据会员规范管理及维护会员，增强互动保持粘度，预防广告乱象及僵粉累积造成会员流失；
+  </view>
+  <view>
+    3.活动指导：会员参加活动特别是新会员的活动指导及问答；新增拼团活动的宣传，提高会员报名活动的参与率。
+  </view> 
+  <view class='title'>
+    二、团长权益
+  </view>
+  <view>
+      <view class="tr">
+        <view>团长等级</view>
+        <view>邀请数量</view>
+        <view>拓客佣金率</view>
+        <view>兑现费率</view>
       </view>
-      <view class="member">
-        <view style="color:#FFE8B4;font-size: 13px">普通会员</view>
-        <view>成为团长，邀请越多赚越多</view>
-        <view style="background-color: #FFE8B4;border-radius: 10px;margin:1px;padding:2px;color:#333333;display: flex;align-items: center"><view>立即申请</view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+      <view wx:for="{{grade}}" class="tr">
+        <view>{{item.name}}</view>
+        <view>{{item.minFriendCount}}</view>
+        <view>{{item.profitRation}}</view>
+        <view>{{item.profitRation}}</view>
       </view>
-    </view>
-    <view style="margin-top: 10px">
-      <view class="options">
-        <view><image src="../../images/integral.png" style="height: 14px;width:14px;margin:0 10px" />我的积分</view>
-        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
-      </view>
-      <view class="options">
-        <view><image src="../../images/activity.png" style="height: 14px;width:14px;margin:0 10px" />我的活动</view>
-        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
-      </view>
-    </view>
-    <view style="margin-top: 10px">
-      <view class="options">
-        <view><image src="../../images/exchange.png" style="height: 14px;width:14px;margin:0 10px" />我的兑换</view>
-        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
-      </view>
-      <view class="options">
-        <view><image src="../../images/data.png" style="height: 14px;width:14px;margin:0 10px" />我的资料</view>
-        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
-      </view>
-    </view>
-    <view style="margin-top: 10px">
-      <view class="options">
-        <view><image src="../../images/service.png" style="height: 14px;width:14px;margin:0 10px" />联系客服</view>
-        <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
-      </view>
-    </view>
+  </view>
+  <view>
+    若团长邀请的下线会员利用闲暇时间每天参与2单拼团活动，平均每单获赠10积分，即该会员一个月获赠600积分=480元，则
+  </view>
+  <view>
+    V1级团长最高可得：
+    600*5%*50*85%=1275元
+  </view>
+  <view>
+    V2级团长最高可得：
+    600*10%*200*90%=10800元
+  </view>
+  <view>
+    V3级团长最高可得：
+    600*15%*500*95%=42750元
+  </view>
+  <view>
+    V4级团长至少可得：
+    600*20%*501*100%=60120元
   </view>
   
+  <view>
+      此文档会不断完善更新，所有规则以最新为准
+  </view>
+  <view>
+      最终解释权在法律允许的范围内归小ai管家所有
+  </view>
+</view>

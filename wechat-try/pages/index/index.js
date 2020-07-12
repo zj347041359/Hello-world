@@ -140,7 +140,25 @@ Page({
     }else if(title=='团长招募'){
       wx.navigateTo({url:"/pages/prompt/recruit"})
     }else{
-      console.log(title)
+      wx.showModal({
+        title: '联系客服',
+        content: '客服微信：ainuoermy1',
+        confirmText:"复制微信",
+        success (res) {
+          if (res.confirm) {
+            wx.setClipboardData({
+              data: 'ainuoermy1',
+              success (res) {
+                wx.getClipboardData({
+                  success (res) {
+                    console.log(res.data) // data
+                  }
+                })
+              }
+            })
+          }
+        }
+      })
     }
   }
 })
