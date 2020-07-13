@@ -1,0 +1,38 @@
+<!--hot.wxml-->
+<view  >
+    <view>
+        <image src="{{giftData.coverPictureUrl}}" style="height: 200px;width:100%" />
+    </view>
+    <view style="padding:0 10px;background-color: #fff">
+        <view style="padding-left: 5px;font-size: 14px">{{giftData.name}}</view>
+        <view style="color:#DF4040;padding-left: 5px;font-size: 14px">{{giftData.points}}积分</view>
+        <view style="display: flex;justify-content: space-between;margin: 5px 0; ">
+            <view style="display: flex;">
+                剩余份数：
+                <view style="color:#DF4040">{{giftData.inventory}}</view>
+                份</view>
+            <view style="display: flex">
+                已兑换：
+                <view style="color:#DF4040">{{giftData.exchangeAmount}}</view>
+                份</view>
+        </view>
+        <view style="border-bottom:1px solid #f4f4f4;border-top:1px solid #f4f4f4;margin: 5px 0;padding:5px 0;color:#B8B8B8">邮费：5积分</view>
+        <view>
+            <view style="color:#DF4040;margin:5px 0;">温馨提示：</view>
+            <view class="information">礼品48小时内发货</view>
+            <view class="information">默认快递：XX快递</view>
+            <view class="information">新疆、内蒙古、西藏不发货</view>
+        </view>
+        <view class="bottomBar">
+            <view class="bar">
+                <mp-icon bindtap="index" icon="home" color="#B8B8B8" size="{{20}}" />
+                <view bindtap="index">首页</view>
+            </view>
+            <view class="bar">
+                <mp-icon icon="star" color="#B8B8B8" size="{{20}}" />
+                <view>收藏</view>
+            </view>
+            <view class="barBtn" bindtap="exchange">立即兑换</view>
+        </view>
+    </view>
+</view>

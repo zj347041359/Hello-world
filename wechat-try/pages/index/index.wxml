@@ -1,8 +1,8 @@
 <!--hot.wxml-->
 <view>
-  <!-- <view wx:if="{{!warrant}}" class="mask">
+  <view wx:if="{{!warrant}}" class="mask">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登陆 </button>
-  </view> -->
+  </view>
   <view>
     <view>
       <image src="../../images/invite.png" style="height: 100px" />

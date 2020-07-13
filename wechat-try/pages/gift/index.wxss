@@ -8,19 +8,38 @@ page{
     padding:2px 4px;
 }
 .left{
-    flex: 0 0 50px;
     background-color: #fff;
+    padding:10px 0;
+    text-align: center;
+    font-size: 12px;
 }
 .right{
-    flex: 0 0 1;
+    padding:10px 4px;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 .select{
     margin:6px 0;
-    padding:4px 6px;
+    padding:10px 5px;
     border-left:2px solid #DF4040;
-    height:30px;
     background-color:#f4f4f4 ;
+    text-align: center;
 }
 .category{
-    height:30px;
+    margin:6px 0;
+    padding:10px 6px;
+    text-align: center;
+}
+.gift{
+    background-color: #fff;
+    border-radius: 5px;
+    margin:5px;
+    padding:5px;
+    font-size: 12px;
+    max-height: 150px;
+}
+.explanation{
+    text-align: center;
+    color:#B8B8B8;
+    font-size: 10px;
 }

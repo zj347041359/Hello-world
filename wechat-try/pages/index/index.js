@@ -16,51 +16,51 @@ Page({
     countdownTime:[],
 
   },
-  // onLoad: function () {
-  //   wx.getSetting({
-  //     success: res => {
-  //       if (res.authSetting['scope.userInfo']) {
-  //         wx.getUserInfo({
-  //           success: res => {
-  //             app.globalData.rawData = res.rawData
-  //             this.setData({
-  //               warrant:true
-  //             })
-  //           }
-  //         })
-  //       }
-  //     }
-  //   })
-  //   wx.login({
-  //     success: res => {
-  //       // 发送 res.code 到后台换取 openId, sessionKey, unionId
-  //       request.post('member/onLogin',{code:res.code},e=> {
-  //         if(e.statusCode==200){
-  //           if(e.header["x-auth-token"]){
-  //             wx.setStorageSync('token', e.header["x-auth-token"])
-  //           }
-  //           let { data} = e
-  //           if(JSON.stringify(data) == "{}"&&this.data.warrant){
-  //             wx.navigateTo({url:"/pages/registered/index"})
-  //           }else if(!data.labelJson&&this.data.warrant){
-  //             wx.navigateTo({url:"/pages/registered/information/information"})
-  //           }else if(JSON.stringify(data) != "{}"){
-  //             app.globalData.userInfo = data
-  //             this.checking()
-  //           }
-  //         }else{
-  //           wx.showToast({title: `网络异常`, icon: 'none', duration:3000})
-  //         }
-  //       },e=>{wx.showToast({title: `网络异常`, icon: 'none', duration:3000})})
-  //     }
-  //   })
+  onLoad: function () {
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: res => {
+              app.globalData.rawData = res.rawData
+              this.setData({
+                warrant:true
+              })
+            }
+          })
+        }
+      }
+    })
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        request.post('member/onLogin',{code:res.code},e=> {
+          if(e.statusCode==200){
+            if(e.header["x-auth-token"]){
+              wx.setStorageSync('token', e.header["x-auth-token"])
+            }
+            let { data} = e
+            if(JSON.stringify(data) == "{}"&&this.data.warrant){
+              wx.navigateTo({url:"/pages/registered/index"})
+            }else if(!data.labelJson&&this.data.warrant){
+              wx.navigateTo({url:"/pages/registered/information/information"})
+            }else if(JSON.stringify(data) != "{}"){
+              app.globalData.userInfo = data
+              this.checking()
+            }
+          }else{
+            wx.showToast({title: `网络异常`, icon: 'none', duration:3000})
+          }
+        },e=>{wx.showToast({title: `网络异常`, icon: 'none', duration:3000})})
+      }
+    })
 
-  // },
-  // onShow: function () {
-  //   if(!app.globalData.userInfo){
-  //     this.checking()
-  //   }
-  // },
+  },
+  onShow: function () {
+    if(!app.globalData.userInfo){
+      this.checking()
+    }
+  },
   checking:function(){
     let _this = this
     request.get('member/me',null,e=> {

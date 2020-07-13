@@ -9,6 +9,8 @@
     "pages/registered/label/label",
     "pages/registered/information/information",
     "pages/gift/index",
+    "pages/gift/details",
+    "pages/gift/exchange",
     "pages/my/index",
     "pages/logs/logs"
   ],

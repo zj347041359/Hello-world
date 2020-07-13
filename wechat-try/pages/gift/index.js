@@ -7,11 +7,12 @@ Page({
   data: {
     category:[],
     gift:[],
-    chooseCategory:null,
+    chooseCategory:'null',
+    keyword:null,
   },
 
   onLoad: function () {
-    this.searchGift()
+    this.searchGift(null,null)
     request.get("category/find/byType",{categoryType:'gift'},res=>{
       if(res.statusCode==200){
         this.setData({
@@ -24,15 +25,31 @@ Page({
 
   },
   search: function (e) {
-    console.log(e.detail.value)
+    this.setData({
+      keyword:e.detail.value
+    })
+    this.searchGift(this.data.chooseCategory,e.detail.value)
   },
-  searchGift:function (page,categoryId,keyWords) {
-    request.get("applets/gift/findByType",{page,categoryId,keyWords,giftType:'exchange'},res=>{
+  searchGift:function (categoryId,keyWords) {
+    request.get("applets/gift/findByType",{categoryId,keyWords,giftType:'exchange'},res=>{
       if(res.statusCode==200){
         this.setData({
           gift:res.data
         })
       }
     },e=>console.log(e.data.message))
+  },
+  selectCategory:function (e) {
+    let categoryId = e.currentTarget.dataset.id
+    this.setData({
+      chooseCategory:categoryId
+    })
+    this.searchGift(categoryId,this.data.keyword)
+  },
+  selectGift:function (e) {
+    let id=e.currentTarget.dataset.id
+    wx.navigateTo({
+      url:`/pages/gift/details?id=${id}`,
+    })
   }
 })

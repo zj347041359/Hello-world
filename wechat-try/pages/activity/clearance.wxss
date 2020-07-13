@@ -50,3 +50,12 @@ page{
 .unSelect{
     color:#333333;
 }
+.barBtn{
+    background-color: #DF4040;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 15px;
+    font-size: 12px
+}

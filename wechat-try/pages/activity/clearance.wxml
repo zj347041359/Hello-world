@@ -115,6 +115,6 @@
                 <view style="color:#DF4040">59</view>
             </view>
         </view>
-        <view style="background-color: #DF4040;color:#fff;display: flex;justify-content: center;align-items: center;padding:10px 15px;font-size: 12px">立即报名</view>
+        <view class="barBtn">立即报名</view>
     </view>
 </view>

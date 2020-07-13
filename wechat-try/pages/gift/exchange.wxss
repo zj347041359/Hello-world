@@ -1,0 +1,28 @@
+page{
+    font-size: 12px;
+    background-color: #f4f4f4;
+}
+.gift{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    background-color: #fff;
+    margin: 10px 0;
+    padding:10px 15px;
+    grid-column-gap:5%;
+}
+.select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 0;
+}
+.btn{
+    background-color: #DF4040;
+    height: 40px;
+    color:#fff;
+    margin:30px 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+}

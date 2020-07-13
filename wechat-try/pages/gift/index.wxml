@@ -1,13 +1,33 @@
 <!--hot.wxml-->
-<view >
-  <view style="background-color: #DF4040;padding: 8px 10px;">
+<view>
+  <view style="background-color: #DF4040;padding: 8px 10px;min-height: 100%;">
     <input class="search" placeholder-style="font-size:12px" placeholder="请输入礼品关键词搜索" type='text' confirm-typ="search" bindconfirm="search" />
   </view>
-  <view style="display:flex">
+  <view style="display: grid;grid-template-columns: 20% 80%;">
     <view class="left">
-      <view class="{{chooseCategory==null?'select':'category'}}">全部</view>
-      <view wx:for="{{category}}" wx:for-item="item" class="{{chooseCategory==item.id?'select':'category'}}" >{{item.name}}</view>
+      <view class="{{chooseCategory=='null'?'select':'category'}}" bindtap="selectCategory" data-id="null">全部</view>
+      <view wx:for="{{category}}" wx:for-item="item" class="{{chooseCategory==item.id?'select':'category'}}" bindtap="selectCategory" data-id="{{item.id}}" >
+        <view>
+          {{item.name}}
+        </view>
+      </view>
     </view>
-    <view class="right"></view>
+    <view>
+      <view class="right">
+        <view wx:for="{{gift}}" class="gift" wx:for-item="item" data-id="{{item.id}}" bindtap="selectGift" >
+          <view style="display: flex;justify-content: center;align-items: center">
+            <image src="{{item.coverPictureUrl}}" style="height: 110px;width:95%;border-radius: 10px" />
+          </view>
+          <view>{{item.name}}</view>
+          <view style="display: flex;justify-content: space-between">
+            <view style="color:#DF4040">{{item.points}}积分</view>
+            <view style="color:#B8B8B8">{{item.exchangeAmount}}人兑换</view>
+          </view>
+        </view>
+      </view>
+      <view class="explanation">
+        到底了
+      </view>
+    </view>
   </view>
 </view>

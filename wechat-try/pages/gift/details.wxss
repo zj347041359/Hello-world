@@ -1,0 +1,31 @@
+page{
+    font-size: 12px;
+    background-color: #f4f4f4;
+}
+.information{
+    margin:5px 0;
+}
+.bottomBar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    font-size: 12px;
+}
+.bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.barBtn{
+    background-color: #DF4040;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px
+}
