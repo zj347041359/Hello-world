@@ -1,0 +1,21 @@
+page{
+    font-size: 12px;
+    background-color: #f4f4f4;
+}
+.input{
+    display: grid;
+    grid-template-columns: 28% 68%;
+    grid-column-gap:4%;
+    border-bottom: 1px solid #f4f4f4;
+    padding:10px;
+}
+.btn{
+    background-color: #DF4040;
+    height: 40px;
+    color:#fff;
+    margin:30px 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+}
