@@ -23,9 +23,9 @@ Page({
         city:cityData[provinceData[0]],
         area:addressData[provinceData[0]][cityData[provinceData[0]][0]],
         address:null,
-        name:null,
+        consignee:null,
         phone:null,
-        lastAddress:provinceData[0]+cityData[provinceData[0]][0]+addressData[provinceData[0]][cityData[provinceData[0]][0]][0],
+        lastAddress:[provinceData[0],cityData[provinceData[0]][0],addressData[provinceData[0]][cityData[provinceData[0]][0]][0]],
         areaDetailed:null,
         chooseArea:[0,0,0]
     },
@@ -40,9 +40,9 @@ Page({
     enter:function (e) {
         let type = e.currentTarget.dataset.type
         let value = e.detail.value
-        if(type == 'name'){
+        if(type == 'consignee'){
             this.setData({
-                name:value
+                consignee:value
             })
         }else if(type=='phone'){
             this.setData({
@@ -50,7 +50,7 @@ Page({
             })
         }else{
             this.setData({
-                address:value
+                areaDetailed:value
             })
         }
 
@@ -77,11 +77,47 @@ Page({
                 val[2]=0
             }
         }
-        let data = provinceData[val[0]]+cityData[provinceData[val[0]]][val[1]]+(addressData[provinceData[val[0]]][cityData[provinceData[val[0]]][val[1]]])[val[2]]
+        let data = [provinceData[val[0]],cityData[provinceData[val[0]]][val[1]],(addressData[provinceData[val[0]]][cityData[provinceData[val[0]]][val[1]]])[val[2]]]
         this.setData({
             chooseArea:val,
             lastAddress:data
         })
     },
+    sum:function () {
+        let areaDetailed =this.data.areaDetailed
+        let consignee =this.data.consignee
+        let phone =this.data.phone
+        let area = this.data.lastAddress
+        if(!areaDetailed){
+            wx.showToast({
+                title: '请输入详细地址',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
+        }
+        if(!phone){
+            wx.showToast({
+                title: '请输入手机号码',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
+        }
+        if(!consignee){
+            wx.showToast({
+                title: '请输入收货人',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
+        }
+        let data = {consignee,phone,province:area[0],city:area[1],district:area[2],specificAddress:areaDetailed}
+        request.post('member/add/address',data,res=>{
+            if(res.statusCode==200){
+                wx.navigateBack()
+            }
+        },e=>console.log(e.data.message))
+    }
 
 })

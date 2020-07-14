@@ -20,7 +20,7 @@
     <view style="text-align: center">
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
             <view class="picker">
-                选择年龄：{{array[index]}}
+                选择年龄：{{array[index]}}后
             </view>
         </picker>
     </view>

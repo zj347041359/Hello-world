@@ -34,7 +34,7 @@ Page({
         })
         this.setData({
             gender:e.gender,
-            age:e.age.slice(0,2),
+            age:e.age,
             city:e.city,
             province:e.province
         })

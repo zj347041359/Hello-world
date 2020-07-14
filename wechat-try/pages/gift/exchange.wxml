@@ -26,11 +26,23 @@
         </view>
     </view>
     <view style="background-color: #fff;margin: 10px 0;padding:10px 15px;">
-        <view class="select">
-            <view><mp-icon icon="add" color="#DF4040" size="{{16}}" /> 添加收货地址</view>
+        <view class="select" wx:if="{{!selectAddress}}">
+            <view bindtap="selectAddress">
+                <mp-icon icon="add" color="#DF4040" size="{{16}}" /> 添加收货地址
+            </view>
             <view style="color:#DF4040">
                 <mp-icon icon="arrow" color="#B8B8B8" size="{{16}}" />
             </view>
+        </view>
+        <view class="select" wx:if="{{selectAddress}}">
+            <view>
+                <view style="display: flex;">
+                    <view style="margin-right: 10px">{{selectAddress.consignee}}</view>
+                    <view>{{selectAddress.phone}}</view>
+                </view>
+                <view style="font-size: 12px;color:#B8B8B8">{{selectAddress.province+selectAddress.city+selectAddress.district+selectAddress.specificAddress}}</view>
+            </view>
+            <view style="display: flex;align-items: center" bindtap="selectAddress" >重新选择<mp-icon icon="arrow" color="#B8B8B8" size="{{16}}" /></view>
         </view>
     </view>
     <view class="btn" bindtap="exchange" >

@@ -27,12 +27,16 @@ Page({
         phone:null,
         lastAddress:provinceData[0]+cityData[provinceData[0]][0]+addressData[provinceData[0]][cityData[provinceData[0]][0]][0],
         areaDetailed:null,
-        chooseArea:[0,0,0]
+        chooseArea:[0,0,0],
+        editData:null,
     },
 
     onLoad: function (e) {
-        //let { id } = e
-
+        let pages = getCurrentPages();
+        let prevPage = pages[pages.length - 2]
+        this.setData({
+            editData:prevPage.data.editData
+        })
     },
     onShow:function(){
 

@@ -45,5 +45,6 @@ App({
     rawData:null,
     warrant:false,
     labelData:[],
+    transferData:null,
   }
 })
