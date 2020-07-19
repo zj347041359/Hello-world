@@ -1,0 +1,21 @@
+/**hot.wxss**/
+page{
+    background-color: #f4f4f4;
+}
+.set{
+    margin: 10px 0;
+    padding:5px 10px;
+    background-color: #fff;
+}
+.options{
+    display: flex;
+    padding:0 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+.line{
+    height: 1px;
+    background-color: #f4f4f4;
+    width: 100%;
+}

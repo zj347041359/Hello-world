@@ -1,14 +1,12 @@
 page{
-    font-size: 12px;
     background-color: #f4f4f4;
 }
-.input{
+.information{
     display: grid;
-    grid-template-columns: 28% 68%;
-    grid-column-gap:4%;
-    border-bottom: 1px solid #f4f4f4;
-    padding:10px;
+    grid-template-columns: 75% 25%;
     background-color: #fff;
+    margin:10px 0;
+    padding:10px;
 }
 .btn{
     background-color: #DF4040;

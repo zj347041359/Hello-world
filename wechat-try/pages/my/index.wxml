@@ -4,42 +4,58 @@
     <view style="display: flex;justify-content:space-between">
       <view style="display: flex">
         <view>
-          头像
+          <image src="{{userInfo.avatarUrl}}" style="height: 60px;width: 60px;border-radius: 30px;margin:5px 15px;" />
         </view>
-        <view>
-          <view>南宫</view>
-          <view>1111</view>
+        <view style="font-size: 12px;color:#fff">
+          <view style="font-size: 14px;margin:10px 15px;">{{userInfo.nickName}}</view>
+          <view wx:if="{{userInfo.invitationCode}}" style="display: flex;align-items: center;margin:10px 0;">
+            <view style="padding:4px 6px;background-color:#C72323;margin-right: 5px;border-radius: 10px">{{userInfo.invitationCode}}</view>
+            <view bindtap="copy" data-text="{{userInfo.invitationCode}}" >复制</view>
+          </view>
         </view>
       </view>
-      <view class="memberType"><image src="../../images/member.png" style="height: 14px;width:14px;margin:0 4px" />普通会员<mp-icon icon="arrow" color="#fff" style="margin:0 4px" size="{{12}}" /></view>
+      <view class="memberType" wx:if="{{!userInfo.invitationCode}}"><image src="../../images/member.png" style="height: 14px;width:14px;margin:0 4px" />普通会员<mp-icon icon="arrow" color="#fff" style="margin:0 4px" size="{{12}}" /></view>
+      <view class="memberType" wx:if="{{userInfo.invitationCode}}"><image src="../../images/member.png" style="height: 14px;width:14px;margin:0 4px" />团长<mp-icon icon="arrow" color="#fff" style="margin:0 4px" size="{{12}}" /></view>
     </view>
-    <view class="member">
+    <view class="member" wx:if="{{!userInfo.invitationCode}}">
       <view style="color:#FFE8B4;font-size: 13px">普通会员</view>
       <view>成为团长，邀请越多赚越多</view>
       <view style="background-color: #FFE8B4;border-radius: 10px;margin:1px;padding:2px;color:#333333;display: flex;align-items: center"><view>立即申请</view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
     </view>
+    <view class="member" wx:if="{{userInfo.invitationCode}}">
+      <view style="color:#FFE8B4;font-size: 13px">团长</view>
+      <view>邀请好友，邀请越多等级越高赚越多</view>
+      <view style="background-color: #FFE8B4;border-radius: 10px;margin:1px;padding:2px;color:#333333;display: flex;align-items: center"><view>去邀请</view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+    </view>
   </view>
-  <view style="margin-top: 10px">
+  <view class="set">
+    <view class="options" wx:if="{{userInfo.invitationCode}}">
+      <view><image src="../../images/invite1.png" style="height: 14px;width:14px;margin:0 10px" />我的邀请</view>
+      <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+    </view>
+    <view class="line" wx:if="{{userInfo.invitationCode}}"></view>
     <view class="options">
       <view><image src="../../images/integral.png" style="height: 14px;width:14px;margin:0 10px" />我的积分</view>
       <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
     </view>
+    <view class="line"></view>
     <view class="options">
       <view><image src="../../images/activity.png" style="height: 14px;width:14px;margin:0 10px" />我的活动</view>
       <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
     </view>
   </view>
-  <view style="margin-top: 10px">
+  <view class="set">
     <view class="options">
       <view><image src="../../images/exchange.png" style="height: 14px;width:14px;margin:0 10px" />我的兑换</view>
       <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
     </view>
-    <view class="options">
+    <view class="line"></view>
+    <view class="options" bindtap="details" data-type="data">
       <view><image src="../../images/data.png" style="height: 14px;width:14px;margin:0 10px" />我的资料</view>
       <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
     </view>
   </view>
-  <view style="margin-top: 10px">
+  <view class="set">
     <view class="options">
       <view><image src="../../images/service.png" style="height: 14px;width:14px;margin:0 10px" />联系客服</view>
       <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>

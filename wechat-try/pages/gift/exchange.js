@@ -8,6 +8,7 @@ Page({
         giftData:{},
         number :1,
         address:null,
+        selectAddress:null,
     },
 
     onLoad: function (e) {
@@ -47,5 +48,10 @@ Page({
             })
         }
     },
+    selectAddress:function () {
+        wx.navigateTo({
+            url:`/pages/address/select`,
+        })
+    }
 
 })

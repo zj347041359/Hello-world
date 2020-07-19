@@ -1,0 +1,21 @@
+<!--hot.wxml-->
+<view  >
+    <view>
+        <view wx:for="{{address}}" wx:for-item="user" class="information" >
+            <view>
+                <view style="display: flex;">
+                    <view style="margin-right: 10px">{{user.consignee}}</view>
+                    <view>{{user.phone}}</view>
+                </view>
+                <view style="font-size: 12px;color:#B8B8B8">{{user.province+user.city+user.district+user.specificAddress}}</view>
+            </view>
+            <view style="display: flex;flex-direction:column;align-items: center;font-size: 12px">
+                <view bindtap="select" data-address="{{user}}">选择该地址</view>
+                <view bindtap="edit" data-address="{{user}}" >编辑</view>
+            </view>
+        </view>
+    </view>
+    <view class="btn" bindtap="add" >
+        新建地址
+    </view>
+</view>

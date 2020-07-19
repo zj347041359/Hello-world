@@ -21,7 +21,7 @@ const cityData = {
 Page({
     data: {
         gender:null,
-        array: ['00后', '95后', '90后', '85后', '80后', '75后', '70后'],
+        array: ['00', '95', '90', '85', '80', '75', '70'],
         index:0,
         city:"北京",
         cityData:["北京"],

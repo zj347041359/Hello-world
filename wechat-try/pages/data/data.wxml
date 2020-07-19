@@ -1,0 +1,80 @@
+<!--hot.wxml-->
+<view >
+    <view class="set">
+        <view class="options">
+            <view>头像</view>
+            <view><image src="{{userInfo.avatarUrl}}" style="height: 35px;width: 35px;" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>微信昵称</view>
+            <view>{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="set">
+        <view class="options">
+            <view>性别</view>
+            <view>{{userInfo.gender==3?'男':'女'}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>年龄</view>
+            <view >{{userInfo.age}}后</view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view style="display: flex;align-items: center;">
+                <view>常住地</view>
+                <view style="color:#B8B8B8;font-size: 12px;margin-left:5px;">(三个月可改一次)</view>
+            </view>
+            <view bindtap="details" data-type="data">{{userInfo.province}}{{userInfo.province!=userInfo.city?userInfo.city:''}}<mp-icon style="margin-left: 5px" icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+    </view>
+    <view class="set">
+        <view class="options">
+            <view>联系客服</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>联系客服</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>联系客服</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options" bindtap="details" data-type="address">
+            <view>收货地址</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+    </view>
+    <view class="set">
+        <view class="options">
+            <view>tb账号</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>jd账号</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>pdd账号</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>tb账号</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+        <view class="line"></view>
+        <view class="options">
+            <view>银行卡号</view>
+            <view><mp-icon icon="arrow" color="#333333" size="{{10}}" /></view>
+        </view>
+    </view>
+</view>

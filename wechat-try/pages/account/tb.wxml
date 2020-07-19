@@ -1,0 +1,12 @@
+<!--hot.wxml-->
+<view  >
+    <view>
+        <view class="input">
+            <view>淘宝账号</view>
+            <view><input bindinput="enter" placeholder="请输入淘宝账号" value="{{value}}"  /></view>
+        </view>
+    </view>
+    <view class="btn" bindtap="sum" >
+        绑定
+    </view>
+</view>

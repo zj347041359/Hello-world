@@ -8,10 +8,15 @@
     "pages/registered/index",
     "pages/registered/label/label",
     "pages/registered/information/information",
+    "pages/address/new",
+    "pages/address/details",
+    "pages/address/edit",
+    "pages/address/select",
     "pages/gift/index",
     "pages/gift/details",
     "pages/gift/exchange",
     "pages/my/index",
+    "pages/data/data",
     "pages/logs/logs"
   ],
   "window":{
